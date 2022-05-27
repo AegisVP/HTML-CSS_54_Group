@@ -28,6 +28,23 @@ body {
   background-image: url("../images/bg2.svg");
 }
 
+// reset styles
+
+.heading {
+  margin: 0;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
 .button {
   display: inline-flex;
   justify-content: center;
