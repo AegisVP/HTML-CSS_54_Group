@@ -22,3 +22,44 @@ body {
 .bg__part2 {
   background-image: url("../images/bg2.svg");
 }
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0;
+  padding: 7px 45px;
+  min-width: 145px;
+  min-height: 40px;
+
+  font-family: 'Caveat Brush', cursive;
+  font-size: 24px;
+  line-height: 30px;
+  color: $color--white;
+  background-color: $color--button__normal;
+
+  border-radius: 25px;
+  cursor: pointer;
+
+  transition:
+    background-color 150ms linear,
+    box-shadow 150ms linear;
+  
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none;
+    background-color: $color--program-icon__fill;
+    box-shadow: 0px 4px 4px rgba(171, 129, 108, 0.25);
+  }
+
+  @media screen and (min-width: 1280px) {
+    min-width: 158px;
+    min-height: 45px;
+
+    &--wide {
+      min-width: 182px;
+    }
+  }
+}
