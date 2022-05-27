@@ -1,8 +1,10 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+@import './variables';
 
 // font-family: 'Caveat Brush', cursive;
 // font-family: 'Montserrat', sans-serif;
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif; 
+  color: $color--text__default;
 }
