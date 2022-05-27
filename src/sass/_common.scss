@@ -1,8 +1,24 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+@import './variables';
 
 // font-family: 'Caveat Brush', cursive;
 // font-family: 'Montserrat', sans-serif;
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif; 
+  color: $color--text__default;
+}
+
+.bg__part1,
+.bg__part2 {
+  background-repeat: no-repeat;
+  background-position: top center; 
+}
+
+.bg__part1 {
+  background-image: url("../images/bg1.svg");
+}
+
+.bg__part2 {
+  background-image: url("../images/bg2.svg");
 }
