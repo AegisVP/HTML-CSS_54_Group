@@ -1,6 +1,11 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
 @import './variables';
 
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
 // font-family: 'Caveat Brush', cursive;
 // font-family: 'Montserrat', sans-serif;
 
