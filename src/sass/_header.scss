@@ -1,16 +1,21 @@
 .header__container {
     position: relative;
-    width: 320px;
-    padding: 0 20px;
+    min-width: 320px;
+    padding: 8 20px 0 20px;
+    margin-left: auto;
+    margin-right: auto;
 
+    @media screen and (min-width: 480px) {
+        width: 480px;
+    }
     @media screen and (min-width: 768px) {
         width: 768px;
-        padding: 0 33px;
+        padding: 35px 33px 0 33px;
     }
 
     @media screen and (min-width: 1280px) {
         width: 1280px;
-        padding: 0 20px;
+        padding: 35px 20px 0 20px;
     }
 }
 
@@ -27,6 +32,9 @@
     margin: 0;
     padding: 0;
     border: none;
+    width: 40px;
+    height: 21px;
+    transform: translate(-5px, -4px);
 
     @media screen and (min-width:768px) {
         top: 32px;
@@ -52,10 +60,39 @@
 .navigation {
     display: flex;
     align-items: center;
+    margin-bottom: 31px;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 16px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 42px;
+    }
 }
 
 .logo__link {
     @extend .link;
+
+    @media screen and (max-width: 767px) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+}
+
+.header__logo {
+        width: 96px;
+        height: 44px;
+
+        
+        @media screen and (min-width: 768px) {
+            height: 47px;
+        }
+        
+        @media screen and (min-width: 1280px) {
+            width: 158px;
+            height: 82px;
+        }
 }
 
 .navigation__list {
@@ -64,6 +101,7 @@
 
     @media screen and (min-width: 1280px) {
         display: flex;
+        margin-left: 162;
     }
 }
 
@@ -77,6 +115,8 @@
 
 .navigation__link {
     @extend .link;
+    font-size: 18px;
+    line-height: 22px;
 }
 
 // title & subtitle
@@ -124,42 +164,39 @@
     }
 }
 
-// register btn
-
-.register__btn {
-    display: block;
-    width: 145px;
-    height: 40px;
-
-    margin-bottom: 40px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0;
-
-    text-align: center;
+.register__link {
+    @extend .link;
     font-family: 'Caveat Brush';
     font-size: 18px;
     line-height: 23px;
     color: rgb(255, 255, 255);
-
+    display: block;
+    width: 145px;
+    height: 40px;
+    
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px 44px;
+    
     background-color: rgb(171, 129, 108);
     border-radius: 25px;
     border: none;
-
-    @media screen and (min-width: 768px) {
-        margin: 0;
-        margin-bottom: 20px;
-    }
-
-    @media screen and (min-width: 1280px) {
-        width: 158px;
-        height: 45px;
-
-        margin-bottom: 32px;
-
-        font-size: 24px;
-        line-height: 30px;
-    }
+    
+        @media screen and (min-width: 768px) {
+            margin: 0;
+            margin-bottom: 20px;
+        }
+    
+        @media screen and (min-width: 1280px) {
+            width: 158px;
+            height: 45px;
+    
+            margin-bottom: 32px;
+    
+            font-size: 24px;
+            line-height: 30px;
+        }
 }
 
 // social 
@@ -167,8 +204,11 @@
 .social__list {
     @extend .list;
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
+    justify-content: center;
+
+    @media screen and (min-width: 768px) {
+        justify-content: left;
+    }
 }
 
 .social__item {
@@ -181,4 +221,9 @@
 
 .social__link {
     @extend .link;
+}
+
+.social__icon {
+    width: 16px;
+    height: 16px;
 }
