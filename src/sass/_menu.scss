@@ -12,12 +12,21 @@
 
 .menu__container {
     position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    width: 320px;
+    min-width: 320px;
     padding-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (min-width: 480px) {
+        width: 480px;
+    }
 
     @media screen and (min-width: 768px) {
         width: 768px;
@@ -33,8 +42,13 @@
     align-items: center;
     justify-content: center;
 
+    width: 30px;
+    height: 30px;
+
     margin: 0;
     padding: 0;
+
+    transform: translate(-6px, -6px);
 
     background-color: transparent;
     border: none;
@@ -50,7 +64,7 @@
 .close__icon {
     width: 18px;
     height: 18px;
-    transition: fill 300ms linear;
+    transition: fill 200ms linear;
 
     .close__btn:hover & {
         fill: $color--main__dark-beige;
@@ -62,16 +76,14 @@
     height: 85px;
 }
 
-.logo__link {
+.logo__link--menu {
     margin-bottom: 40px;
 }
 
 // menu navigation
 
 .menu__list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    @extend .list;
 }
 
 .menu__item {
@@ -83,8 +95,8 @@
 }
 
 .menu__link {
+    @extend .link;
     text-align: center;
-    text-decoration: none;
     color: $color--text__default;
     font-size: 24px;
     line-height: 29px;
