@@ -1,215 +1,201 @@
 $breakpoints: (
-   'mobile': 0,
-   'tablet': 320px,
-   'desktop-sm': 768px,
-   'desktop-bg': 1280px,
+  'mobile': 0,
+  'tablet': 320px,
+  'desktop-sm': 768px,
+  'desktop-bg': 1280px,
 );
 
 @mixin mobile {
-   @media screen and (min-width: map-get($breakpoints, 'mobile')) {
-      @content;
-   }
+  @media screen and (min-width: map-get($breakpoints, 'mobile')) {
+    @content;
+  }
 }
 
 @mixin tablet {
-   @media screen and (min-width: map-get($breakpoints, 'tablet')) {
-      @content;
-   }
+  @media screen and (min-width: map-get($breakpoints, 'tablet')) {
+    @content;
+  }
 }
 
 @mixin desktop-sm {
-   @media screen and (min-width: map-get($breakpoints, 'desktop-sm')) {
-      @content;
-   }
+  @media screen and (min-width: map-get($breakpoints, 'desktop-sm')) {
+    @content;
+  }
 }
 
 @mixin desktop-bg {
-   @media screen and (min-width: map-get($breakpoints, 'desktop-bg')) {
-      @content;
-   }
-}
-
-@mixin mobile-display {
-   @media (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-      @content;
-   }
-}
-
-@mixin retina-display {
-   @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      @content;
-   }
+  @media screen and (min-width: map-get($breakpoints, 'desktop-bg')) {
+    @content;
+  }
 }
 
 .reviews-container {
-   margin-left: auto;
-   margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
 
-   @include desktop-sm {
-      min-width: 768px;
-      width: 768px;
-      padding-left: 32px;
-      padding-right: 32px;
-   }
+  @include desktop-sm {
+    min-width: 768px;
+    width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 
-   @include desktop-bg {
-      min-width: 1280px;
-      width: 1280px;
-      padding-left: 126px;
-      padding-right: 126px;
-   }
+  @include desktop-bg {
+    max-width: 1280px;
+    width: 1280px;
+    padding-left: 126px;
+    padding-right: 126px;
+  }
 }
 
 .reviews-title {
-   margin: 0 0 20px 0;
+  margin: 0 0 20px 0;
 
-   text-align: center;
-   font-family: 'Caveat Brush';
-   font-style: normal;
-   line-height: 1.25;
-   color: $color--main__like-black;
+  text-align: center;
+  font-family: 'Caveat Brush';
+  font-style: normal;
+  line-height: 1.25;
+  color: $color--main__like-black;
 
-   @include desktop-sm {
-   }
-
-   @include desktop-bg {
-      margin: 0 0 36px 0;
-      font-weight: 400;
-      font-size: 36px;
-      line-height: 1.8;
-   }
+  @include desktop-bg {
+    margin: 0 0 36px 0;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1.8;
+  }
 }
 
 .slide__side,
 .slide__center {
-   flex-direction: column;
-   text-align: center;
+  flex-direction: column;
+  text-align: center;
 }
 
 .slide__side {
-   display: none;
+  display: none;
 
-   @include desktop-sm {
-      display: flex;
-      width: 152px;
-   }
+  @include desktop-sm {
+    display: flex;
+    width: 152px;
+  }
 
-   @include desktop-bg {
-      width: 288px;
-   }
+  @include desktop-bg {
+    width: 288px;
+  }
 }
 
 .slide__center {
-   width: 280px;
+  width: 280px;
+  min-width: 160px;
 
-   @include desktop-sm {
-      width: 336px;
-   }
+  @include desktop-sm {
+    width: 336px;
+  }
 
-   @include desktop-bg {
-      width: 394px;
-   }
+  @include desktop-bg {
+    width: 394px;
+  }
 }
 
 .slide__center .slide__image {
-   @include desktop-sm {
-      margin-top: 70px;
-   }
+  @include desktop-sm {
+    margin-top: 70px;
+  }
 
-   @include desktop-bg {
-      margin-top: 144px;
-   }
+  @include desktop-bg {
+    margin-top: 144px;
+  }
 }
 
 .slide__images {
-   display: flex;
-   justify-content: center;
+  display: flex;
+  justify-content: center;
 
-   @include desktop-sm {
-      justify-content: space-between;
-   }
+  @include desktop-sm {
+    justify-content: space-between;
+  }
 }
 
 .slide__image {
-   display: block;
-   border-radius: 50%;
-   width: 100%;
+  display: block;
+  border-radius: 50%;
+  width: 100%;
 }
 
 .slide__rating {
-   margin-top: 8px;
+  margin-top: 8px;
 }
 
 .slide__reviewer-name {
-   margin: 8px 0 0 0;
-   font-family: 'Montserrat';
-   font-style: italic;
-   font-weight: 500;
-   font-size: 16px;
-   line-height: 20px;
+  margin: 8px 0 0 0;
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .reviews__text {
-   margin: 8px 0 0 0;
+  margin: 8px 0 0 0;
 
-   text-align: center;
+  text-align: center;
 
-   @include desktop-sm {
-      margin: 20px 0 0 0;
-   }
+  @include desktop-sm {
+    margin: 20px 0 0 0;
+  }
 }
 
 .reviews__pagination {
-   text-align: center;
+  text-align: center;
 
-   @include desktop-sm {
-      margin-top: 32px;
-   }
+  @include desktop-sm {
+    margin-top: 32px;
+  }
 }
 
 .slider-controls {
-   display: flex;
-   justify-content: center;
-   align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-   margin-top: 32px;
+  margin-top: 32px;
 }
 
 .swiper-pagination {
-   position: relative;
-   bottom: 0;
-   width: 36px;
+  position: relative;
+  bottom: 0;
+  width: 36px;
 
-   font-family: 'Montserrat';
-   font-style: normal;
-   font-weight: 400;
-   font-size: 16px;
-   line-height: 1.25;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
 
-   color: $color--main__dark-beige;
+  color: $color--main__dark-beige;
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-   position: relative;
-   margin: 0;
-   right: unset;
-   left: unset;
-   width: 50px;
-   background: none;
-   border: none;
+  position: relative;
+  margin: 0;
+  right: unset;
+  left: unset;
+  width: 50px;
+  background: none;
+  border: none;
 
-   font-family: 'Montserrat';
-   font-style: normal;
-   font-weight: 400;
-   font-size: 16px;
-   line-height: 1.25;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
 
-   color: $color--main__dark-beige;
+  color: $color--main__dark-beige;
 
-   &::after {
-      display: none;
-   }
+  &::after {
+    display: none;
+  }
 }
