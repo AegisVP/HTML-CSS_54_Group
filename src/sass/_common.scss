@@ -12,6 +12,11 @@
 body {
   font-family: 'Montserrat', sans-serif; 
   color: $color--text__default;
+
+  &.menu-open {
+    overflow: hidden;
+    pointer-events: none;
+  }
 }
 
 .bg__part1,
