@@ -12,16 +12,18 @@ $color--main__light-beige: #fffff9;
 $color--black: #000000;
 $color--white: #ffffff;
 
-$color--background__dark: $color--main__medium-beige;
-$color--background__light: $color--main__light-beige;
+$color--background__dark: #fef3e4;;
+$color--background__light: #fffff9;
 
-$color--text__default: $color--main__like-black;
+$color--text__default: #2e2520;
 $color--text__light-beige: rgba(171, 129, 108, 0.5); // $color--main__dark-beige + 50% opacity, Used as placeholder in inputs
 
-$color--program-icon__fill: $color--main__darker-beige;
-$color--svg-icon__fill: $color--black;
-$color--star-icon__fill: $color--main__dark-beige;
+$color--program-icon__fill: #674d40;
+$color--svg-icon__fill: #000000;
+$color--star-icon__fill: #674d40;
 
-$color--button__normal: $color--main__dark-beige;
+$color--button__normal: #674d40;
 
 $font--accent: "'Caveat Brush', cursive";
+
+$animation--duration: 200ms;
