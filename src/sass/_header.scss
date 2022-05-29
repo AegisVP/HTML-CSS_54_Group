@@ -75,7 +75,6 @@
 }
 
 .logo__link {
-    @extend .link;
 
     @media screen and (max-width: 767px) {
             margin-left: auto;
@@ -154,7 +153,6 @@
 }
 
 .header__subtitle {
-    @extend .heading;
     margin-bottom: 32px;
 
     text-align: center;
@@ -175,7 +173,6 @@
 }
 
 .register__link {
-    @extend .link;
     font-family: 'Caveat Brush';
     font-size: 18px;
     line-height: 23px;
@@ -247,7 +244,6 @@
 // social 
 
 .social__list {
-    @extend .list;
     display: flex;
     justify-content: center;
 
@@ -265,7 +261,6 @@
 }
 
 .social__link {
-    @extend .link;
     transition: transform 250ms linear;
 }
 
