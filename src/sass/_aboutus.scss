@@ -1,24 +1,173 @@
 .about-us {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__description {
+    display: block;
+  }
+
   &__title {
     max-width: 392px;
     margin-top: 0;
     margin-bottom: 10px;
 
-    font-family: 'Caveat Brush';
+    font-family: $font--accent;
     font-style: normal;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 65px;
-    text-align: center;
+    text-align: start;
   }
   &__text {
     display: block;
     flex-direction: column;
-    max-width: 392px;
-    margin-bottom: 0;
+    margin: 0;
+    margin-bottom: 16px;
+  }
+  &__text :not(:first-child) {
+    margin-bottom: 16px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .about-us__container {
+    flex-direction: column;
+    align-items: center;
+    max-width: 320px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .about-us__title {
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  .about-us__text {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .extra-text {
+    display: none;
+  }
+  .read-more {
+    font-family: $font--accent;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    color: $color--main__dark-beige;
+  }
 
+  #read-more:checked ~ .extra-text {
+    display: block;
+  }
+
+  .less {
+    display: none;
+  }
+
+  #read-more:checked ~ .read-more .more {
+    display: none;
+  }
+
+  #read-more:checked ~ .read-more .less {
+    display: inline;
+  }
+}
+
+#read-more:checked ~ .extra-text {
+  display: block;
+}
+
+.less {
+  display: none;
+}
+
+#read-more:checked ~ .read-more .more {
+  display: none;
+}
+
+#read-more:checked ~ .read-more .less {
+  display: inline;
+}
+
+@media screen and (min-width: 768px) {
+  .about-us__container {
+    align-items: stretch;
+    min-width: 768px;
+    width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  .about-us__title {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 16px;
+  }
+  .about-us__text {
+    font-size: 16px;
+    line-height: 20px;
+    max-width: 336px;
+  }
+  .extra-text {
+    display: none;
+  }
+  .read-more {
+    font-family: $font--accent;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    color: $color--main__dark-beige;
+  }
+
+  #read-more:checked ~ .extra-text {
+    display: block;
+  }
+
+  .less {
+    display: none;
+  }
+
+  #read-more:checked ~ .read-more .more {
+    display: none;
+  }
+
+  #read-more:checked ~ .read-more .less {
+    display: inline;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .about-us__container {
+    max-width: 1280px;
+    width: 1280px;
+    padding-left: 126px;
+    padding-right: 126px;
+  }
+  .about-us__text {
+    max-width: 392px;
     font-weight: 400;
     font-size: 18px;
     line-height: 22px;
+  }
+  .about-us__title {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 65px;
+  }
+  .read-more {
+    display: none;
+  }
+  .extra-text {
+    display: inline-block;
+  }
+  .about-us__container::before {
+    background: no-repeat url(../images/spoon@2x_desk.png);
+    width: 178px;
+    transform: rotate(12.22deg);
   }
 }
