@@ -12,7 +12,7 @@ $color--main__light-beige: #fffff9;
 $color--black: #000000;
 $color--white: #ffffff;
 
-$color--background__dark: #fef3e4;;
+$color--background__dark: #fef3e4;
 $color--background__light: #fffff9;
 
 $color--text__default: #2e2520;
@@ -23,7 +23,8 @@ $color--svg-icon__fill: #000000;
 $color--star-icon__fill: #674d40;
 $color--button__normal: #674d40;
 $color--button__hover: #876655;
-$font--accent: "'Caveat Brush', cursive";
+
+$font--accent: 'Caveat Brush', cursive;
 
 $animation--duration: 200ms;
 
