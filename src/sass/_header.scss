@@ -99,7 +99,6 @@
 }
 
 .navigation__list {
-    @extend .list;
     display: none;
 
     @media screen and (min-width: 1280px) {
@@ -117,7 +116,6 @@
 }
 
 .navigation__link {
-    @extend .link;
     font-size: 18px;
     line-height: 22px;
     transition: color 250ms linear;
