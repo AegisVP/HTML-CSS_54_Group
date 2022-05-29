@@ -2,6 +2,7 @@
 .menu__backdrop {
     opacity: 0;
     pointer-events: none;
+    visibility: hidden;
 
     position: absolute;
     top: 0;
