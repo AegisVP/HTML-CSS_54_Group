@@ -1,0 +1,44 @@
+.section {
+  margin: 0;
+  padding: 0;
+
+  &__title {
+    margin: 0 0 20px 0;
+
+    text-align: center;
+    font-family: 'Caveat Brush';
+    font-style: normal;
+    line-height: 1.25;
+    color: $color--main__like-black;
+
+    @include desktop-bg {
+      margin: 0 0 36px 0;
+      font-weight: 400;
+      font-size: 36px;
+      line-height: 1.8;
+    }
+  }
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media screen and (max-width: 767.98px) {
+    max-width: 320px;
+  }
+
+  @include tablet {
+    width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @include desktop-bg {
+    width: 1280px;
+    padding-left: 123px;
+    padding-right: 123px;
+  }
+}
