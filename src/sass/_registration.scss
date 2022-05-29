@@ -1,0 +1,114 @@
+@import '../sass/util/mybase';
+ .section__registration {
+     position: relative;
+     background-color: $color--main__medium-beige;
+  }
+
+.registration-pic, .visually-hidden { 
+
+    @media screen and (max-width: 767px) {
+        position: absolute; 
+        width: 1px; 
+        height: 1px; 
+        margin: -1px; 
+        border: 0; 
+        padding: 0; 
+        white-space: nowrap; 
+        clip-path: inset(100%); 
+        clip: rect(0 0 0 0); 
+        overflow: hidden; 
+    } 
+    
+    @media screen and (min-width: 768px) {
+        position: absolute;
+    } 
+}
+
+.registration {
+    
+    width: 280px;
+    height: 466px;
+    margin: 0;
+
+    background-color: $color--main__light-beige;
+    box-shadow: -4px -4px 4px rgba(171, 129, 108, 0.15),
+    4px 4px 4px rgba(171, 129, 108, 0.15);
+    border-radius: 150px 0px 0px 150px;
+    // transform: rotate(90deg);
+
+    @media screen and (min-width: 768px) {
+        width: 704px;
+        height: 260px;
+        border-radius: 150px;
+    }
+
+}
+
+.section__title {
+    margin-bottom: 20px;
+}
+
+.registration-thumb {
+    display: flex;
+}
+
+.registration-info__item {
+    margin-bottom: 20px;
+}
+
+.registration-info__date,
+.registration-info__place,
+.registration-info__price {
+    margin: 0;
+    
+    color: $color--text__default;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    text-align: center;
+}
+ 
+.registration-form {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.registration-form__text {
+        font-size: 16px;
+        line-height: 1.25;
+        text-align: center;
+        margin-bottom: 20px;
+
+        color: $color--text__default;
+        border-top: 1px solid rgba(171, 129, 108, 0.5);
+}
+
+.registration-field__input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 20px;
+       
+    background-color: $color--main__light-beige;
+    border: transparent;
+    border-bottom: 1px solid $color--main__dark-beige;
+
+    &::placeholder {
+        color: rgba(171, 129, 108, 0.5);
+        font-size: 16px;
+        line-height: 1,25;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 22px;
+    }
+}
+
+.registration-field__lable {
+    display: block;
+}
+
+.button {
+    margin-left: auto;
+    margin-right: auto;
+}

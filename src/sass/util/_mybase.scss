@@ -1,0 +1,193 @@
+.section {
+    margin: 0;
+    padding: 0;
+  
+    &__title {
+      margin: 0;
+  
+      text-align: center;
+      font-family: $font--accent;
+      font-style: normal;
+      line-height: 1.25;
+      color: $color--main__like-black;
+  
+      @include desktop-bg {
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 1.8;
+      }
+    }
+  }
+  
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  
+    @media screen and (max-width: 767.98px) {
+      max-width: 320px;
+    }
+  
+    @include tablet {
+      width: 768px;
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+  
+    @include desktop-bg {
+      width: 1280px;
+      padding-left: 123px;
+      padding-right: 123px;
+    }
+  }
+  // main style dark beige:         #ab816c, rgb(171, 129, 108)
+// main style medium beige:       #fef3e4, rgb(254, 243, 228)
+// main style light beige:        #fffff9, rgb(255, 255, 249)
+// main style text-black;         #2e2520, rgb(46,  37,  32)
+
+$color--main__like-black: #2e2520;
+$color--main__darker-beige: #674d40;
+$color--main__dark-beige: #ab816c;
+$color--main__medium-beige: #fef3e4;
+$color--main__light-beige: #fffff9;
+
+$color--black: #000000;
+$color--white: #ffffff;
+
+$color--background__dark: #fef3e4;;
+$color--background__light: #fffff9;
+
+$color--text__default: #2e2520;
+$color--text__light-beige: rgba(171, 129, 108, 0.5); // $color--main__dark-beige + 50% opacity, Used as placeholder in inputs
+
+$color--program-icon__fill: #674d40;
+$color--svg-icon__fill: #000000;
+$color--star-icon__fill: #674d40;
+$color--button__normal: #674d40;
+$color--button__hover: #876655;
+$font--accent: 'Caveat Brush', cursive;
+
+$animation--duration: 200ms;
+
+$breakpoints: (
+  'mobile-sm': 320px,
+  'mobile-bg': 480px,
+  'tablet': 768px,
+  'desktop-bg': 1280px,
+);
+
+// @import '~node_modules/modern-normalize/modern-normalize.css';
+// @import '../../../modern-normalize/modern-normalize.css';
+@import './variables';
+@import './media-mixin';
+
+@import './container';
+@import './button';
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+// font-family: 'Caveat Brush', cursive;
+// font-family: 'Montserrat', sans-serif;
+
+body {
+  font-family: 'Montserrat', sans-serif; 
+  color: $color--text__default;
+}
+
+.bg__part1,
+.bg__part2 {
+  background-repeat: no-repeat;
+  background-position: top center; 
+}
+
+.bg__part1 {
+  background-image: url("../images/bg1.svg");
+}
+
+.bg__part2 {
+  background-image: url("../images/bg2.svg");
+}
+
+// reset styles
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// класс для коричневої кнопки
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    margin: 0;
+    padding: 7px 45px;
+    min-width: 145px;
+    min-height: 40px;
+  
+    font-family: $font--accent;
+    font-size: 24px;
+    line-height: 30px;
+    color: $color--white;
+    background-color: $color--button__normal;
+  
+    border-radius: 25px;
+    border: 0;
+    cursor: pointer;
+  
+    transition:
+      background-color 150ms linear,
+      box-shadow 150ms linear;
+  
+    &:hover,
+    &:active,
+    &:focus {
+      outline: none;
+      background-color: $color--main__darker-beige;
+      box-shadow: 0px 4px 4px rgba(171, 129, 108, 0.25);
+    }
+  
+    @media screen and (min-width: 1280px) {
+      min-width: 158px;
+      min-height: 45px;
+  
+      &--wide {
+        min-width: 182px;
+      }
+    }
+  }
+
+  @mixin mobile-sm {
+    @media screen and (min-width: map-get($breakpoints, 'mobile-sm')) {
+      @content;
+    }
+  }
+  
+  @mixin mobile-bg {
+    @media screen and (min-width: map-get($breakpoints, 'mobile-bg')) {
+      @content;
+    }
+  }
+  
+  @mixin tablet {
+    @media screen and (min-width: map-get($breakpoints, 'tablet')) {
+      @content;
+    }
+  }
+  
+  @mixin desktop-bg {
+    @media screen and (min-width: map-get($breakpoints, 'desktop-bg')) {
+      @content;
+    }
+  }
