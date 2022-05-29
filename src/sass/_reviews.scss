@@ -1,0 +1,176 @@
+   // скопіював до класу .container
+.reviews__container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  @include tablet {
+    min-width: 768px;
+    width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @include desktop-bg {
+    max-width: 1280px;
+    width: 1280px;
+    padding-left: 126px;
+    padding-right: 126px;
+  }
+}
+
+   // скопіював до класу .section__title
+.reviews__title {
+  margin: 0 0 20px 0;
+
+  text-align: center;
+  font-family: 'Caveat Brush';
+  font-style: normal;
+  line-height: 1.25;
+  color: $color--main__like-black;
+
+  @include desktop-bg {
+    margin: 0 0 36px 0;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1.8;
+  }
+}
+
+.slide__side,
+.slide__center {
+  flex-direction: column;
+  text-align: center;
+}
+
+.slide__side {
+  display: none;
+
+  @include tablet {
+    display: flex;
+    width: 152px;
+  }
+
+  @include desktop-bg {
+    width: 288px;
+  }
+}
+
+.slide__center {
+  width: 280px;
+  min-width: 160px;
+
+  @include tablet {
+    width: 336px;
+  }
+
+  @include desktop-bg {
+    width: 394px;
+  }
+}
+
+.slide__center .slide__reviewer-image {
+  @include tablet {
+    margin-top: 70px;
+  }
+
+  @include desktop-bg {
+    margin-top: 144px;
+  }
+}
+
+.slide__reviewer-images {
+  display: flex;
+  justify-content: center;
+
+  @include tablet {
+    justify-content: space-between;
+  }
+}
+
+.slide__reviewer-image {
+  display: block;
+  border-radius: 50%;
+  width: 100%;
+}
+
+.slide__rating {
+  margin-top: 8px;
+}
+
+.slide__reviewer-name {
+  margin: 8px 0 0 0;
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.slide__reviewer-text {
+  margin: 8px auto 0 auto;
+  text-align: center;
+
+  @include mobile-bg {
+    width: 420px;
+  }
+
+  @include tablet {
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+
+.reviews__pagination {
+  text-align: center;
+
+  @include tablet {
+    margin-top: 32px;
+  }
+}
+
+.swiper__controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 32px;
+}
+
+.swiper-pagination {
+  position: relative;
+  bottom: 0;
+  width: 36px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+
+  color: $color--main__dark-beige;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: relative;
+  margin: 0;
+  right: unset;
+  left: unset;
+  width: 50px;
+  background: none;
+  border: none;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+
+  color: $color--main__dark-beige;
+
+  &::after {
+    display: none;
+  }
+}

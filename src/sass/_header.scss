@@ -35,6 +35,7 @@
     width: 40px;
     height: 21px;
     transform: translate(-5px, -4px);
+    cursor: pointer;
 
     @media screen and (min-width:768px) {
         top: 32px;
@@ -119,6 +120,15 @@
     @extend .link;
     font-size: 18px;
     line-height: 22px;
+    transition: color 250ms linear;
+
+    &:hover,
+    &:focus {
+        color: $color--text__light-beige;
+}
+    &:active {
+        color: $color--program-icon__fill;
+}
 }
 
 // title & subtitle
@@ -181,13 +191,36 @@
     margin-right: auto;
     padding: 8px 44px;
     
-    background-color: rgb(171, 129, 108);
+    background-color: $color--button__normal;
     border-radius: 25px;
     border: none;
+
+    &:hover, 
+    &:focus {
+        padding: 10px 44px 0 44px;
+        background-color: $color--button__hover;
+    }
     
+    &:active {
+        padding: 10px 44px 0 44px;
+        background-color: $color--program-icon__fill;
+    }
+
         @media screen and (min-width: 768px) {
             margin: 0;
             margin-bottom: 20px;
+
+            &:hover, 
+            &:focus {
+                padding-top: 8px;
+                transform: translateY(-13px);
+            }
+
+            &:active {
+                padding-top: 8px;
+                transform: translateY(-13px);
+                background-color: $color--program-icon__fill;
+            }
         }
     
         @media screen and (min-width: 1280px) {
@@ -198,6 +231,18 @@
     
             font-size: 24px;
             line-height: 30px;
+            
+            &:hover,
+            &:focus {
+                padding-top: 8px;
+                transform: translateY(-2px);
+            }
+            
+            &:active {
+                padding-top: 8px;
+                transform: translateY(-2px);
+                background-color: $color--program-icon__fill;
+            }
         }
 }
 
@@ -223,9 +268,16 @@
 
 .social__link {
     @extend .link;
+    transition: transform 250ms linear;
 }
 
 .social__icon {
     width: 16px;
     height: 16px;
+
+    .social__link:hover &,
+    .social__link:active &,
+    .social__link:focus & {
+        transform: scale(1.5);
+    }
 }
