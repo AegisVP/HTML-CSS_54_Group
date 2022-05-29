@@ -1,3 +1,4 @@
+
 const menuBtnRefOpen = document.querySelector('[data-menu-open]');
 const menuBtnRefClose = document.querySelector('[data-menu-close]');
 const mobileMenuRef = document.querySelector('[data-menu]');
