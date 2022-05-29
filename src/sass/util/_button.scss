@@ -1,3 +1,4 @@
+// класс для коричневої кнопки
 .button {
   display: flex;
   justify-content: center;
@@ -8,7 +9,7 @@
   min-width: 145px;
   min-height: 40px;
 
-  font-family: 'Caveat Brush', cursive;
+  font-family: $font--accent;
   font-size: 24px;
   line-height: 30px;
   color: $color--white;

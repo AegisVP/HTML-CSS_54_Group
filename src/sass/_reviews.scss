@@ -1,34 +1,4 @@
-$breakpoints: (
-  'mobile-sm': 320px,
-  'mobile-bg': 480px,
-  'tablet': 768px,
-  'desktop-bg': 1280px,
-);
-
-@mixin mobile-sm {
-  @media screen and (min-width: map-get($breakpoints, 'mobile-sm')) {
-    @content;
-  }
-}
-
-@mixin mobile-bg {
-  @media screen and (min-width: map-get($breakpoints, 'mobile-bg')) {
-    @content;
-  }
-}
-
-@mixin tablet {
-  @media screen and (min-width: map-get($breakpoints, 'tablet')) {
-    @content;
-  }
-}
-
-@mixin desktop-bg {
-  @media screen and (min-width: map-get($breakpoints, 'desktop-bg')) {
-    @content;
-  }
-}
-
+   // скопіював до класу .container
 .reviews__container {
   margin-left: auto;
   margin-right: auto;
@@ -50,6 +20,7 @@ $breakpoints: (
   }
 }
 
+   // скопіював до класу .section__title
 .reviews__title {
   margin: 0 0 20px 0;
 
