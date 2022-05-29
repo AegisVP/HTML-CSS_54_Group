@@ -1,5 +1,8 @@
 // container
 .menu__backdrop {
+    opacity: 0;
+    pointer-events: none;
+
     position: absolute;
     top: 0;
     left: 0;
@@ -7,16 +10,17 @@
     height: 100vh;
     z-index: 1;
 
-    background-color: rgba(254, 243, 228, 0.9);
+    background-color: $color--main__medium-beige;
     backdrop-filter: blur(4px);
 
     transition: opacity 250ms linear, visibility 250ms linear;
 
-        &.is-open {
-                opacity: 1;
-                visibility: visible;
-                pointer-events: auto;
-            }
+    &.is-open {
+        opacity: 0.95;
+        pointer-events: all;
+        visibility: visible;
+        z-index: 1;
+    }
 }
 
 .menu__container {
