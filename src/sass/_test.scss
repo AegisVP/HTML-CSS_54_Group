@@ -9,21 +9,14 @@
 }
 
 .bg {
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  height: 1035px;
-
-
-  // display: block;
-  // width: 100vw;
-  // min-height: 1400px;
-  // background-size: 100% 1035px;
-  background-image: url("../images/bg1.svg");
 
   outline: 1px solid tomato;
 }
 
 .b-t {
   width: 300px;
+  height: 1200px;
+  display: block;
+  border: 1px solid red;
   margin: 0 auto;
 }

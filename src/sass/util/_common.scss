@@ -14,26 +14,52 @@
 // font-family: 'Montserrat', sans-serif;
 
 body {
+  margin: 0;
+  padding: 0;
   font-family: 'Montserrat', sans-serif; 
   color: $color--text__default;
 }
 
 .bg__part1,
 .bg__part2 {
-  width: 100vw;
-  background-size: cover, 100vw 100%;
   background-repeat: no-repeat;
-  background-position: top center; 
-
-  outline: 1px solid tomato;
+  background-position: top center;
 }
 
-.bg__part1 {
-  background-image: url("../images/bg1.svg");
+.bg__part1 {  
+  background-size: 100% 461px;
+  @include x1 {background-image: url("../images/bg/bg1-m@1x-min.png");}
+  @include x2 {background-image: url("../images/bg/bg1-m@2x-min.png");}
+  
+  @include tablet {
+    background-size: 100% 622px;
+    @include x1 {background-image: url("../images/bg/bg1-t@1x-min.png");}
+    @include x2 {background-image: url("../images/bg/bg1-t@2x-min.png");}
+  }
+
+  @include desktop-bg {
+    background-size: 100% 1035px;
+    @include x1 {background-image: url("../images/bg/bg1-d@1x-min.png");}
+    @include x2 {background-image: url("../images/bg/bg1-d@2x-min.png");}
+  }
 }
 
-.bg__part2 {
-  background-image: url("../images/bg2.svg");
+.bg__part2 {  
+  background-size: 100% 1337px;
+  @include x1 {background-image: url("../images/bg/bg2-m@1x-min.png");}
+  @include x2 {background-image: url("../images/bg/bg2-m@2x-min.png");}
+  
+  @include tablet {
+    background-size: 100% 1519px;
+    @include x1 {background-image: url("../images/bg/bg2-t@1x-min.png");}
+    @include x2 {background-image: url("../images/bg/bg2-t@2x-min.png");}
+  }
+
+  @include desktop-bg {
+    background-size: 100% 2073px;
+    @include x1 {background-image: url("../images/bg/bg2-d@1x-min.png");}
+    @include x2 {background-image: url("../images/bg/bg2-d@2x-min.png");}
+  }
 }
 
 // reset styles
