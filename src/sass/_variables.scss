@@ -4,6 +4,7 @@
 // main style text-black;         #2e2520, rgb(46,  37,  32)
 
 $color--main__like-black: #2e2520;
+$color--main__darker-beige: #674d40;
 $color--main__dark-beige: #ab816c;
 $color--main__medium-beige: #fef3e4;
 $color--main__light-beige: #fffff9;
@@ -17,8 +18,8 @@ $color--background__light: $color--main__light-beige;
 $color--text__default: $color--main__like-black;
 $color--text__light-beige: rgba(171, 129, 108, 0.5); // $color--main__dark-beige + 50% opacity, Used as placeholder in inputs
 
-$color--program-icon__fill: #674d40;
-$color--svg-icon__fill: #000000;
+$color--program-icon__fill: $color--main__darker-beige;
+$color--svg-icon__fill: $color--black;
 $color--star-icon__fill: $color--main__dark-beige;
 
 $color--button__normal: $color--main__dark-beige;

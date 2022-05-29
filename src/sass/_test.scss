@@ -1,0 +1,9 @@
+.menu {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.menu.is-open {
+  opacity: 1;
+  pointer-events: all;
+}
