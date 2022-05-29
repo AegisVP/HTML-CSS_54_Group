@@ -1,17 +1,17 @@
 (() => {
-  const menuBtnRef = document.querySelector('[data-menu-button]');
+  const openMenuBtn = document.querySelector('[data-menu-open]');
+  const closeMenuBtn = document.querySelector('[data-menu-close]');
   const mobileMenuRef = document.querySelector('[data-menu]');
   const openModalBtn = document.querySelector('[data-modal-open]');
   const closeModalBtn = document.querySelector('[data-modal-close]');
   const modal = document.querySelector('[data-modal]');
 
-  menuBtnRef.addEventListener('click', toggleMenu);
+  openMenuBtn.addEventListener('click', toggleMenu);
+  closeMenuBtn.addEventListener('click', toggleMenu);
   openModalBtn.addEventListener('click', toggleModal);
   closeModalBtn.addEventListener('click', toggleModal);
 
   function toggleMenu() {
-    document.body.classList.toggle('menu-open');
-    menuBtnRef.classList.toggle('is-open');
     mobileMenuRef.classList.toggle('is-open');
   }
 
