@@ -91,9 +91,9 @@
 
 // menu navigation
 
-.menu__list {
-    @extend .list;
-}
+// .menu__list {
+//     @extend .list;
+// }
 
 .menu__item {
     margin-bottom: 40px;
@@ -104,7 +104,7 @@
 }
 
 .menu__link {
-    @extend .link;
+    // @extend .link;
     text-align: center;
     color: $color--text__default;
     font-size: 24px;

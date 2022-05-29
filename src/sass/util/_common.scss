@@ -1,0 +1,46 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+@import './variables';
+@import './media-mixin';
+
+@import './container';
+@import './button';
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+// font-family: 'Caveat Brush', cursive;
+// font-family: 'Montserrat', sans-serif;
+
+body {
+  font-family: 'Montserrat', sans-serif; 
+  color: $color--text__default;
+}
+
+.bg__part1,
+.bg__part2 {
+  background-repeat: no-repeat;
+  background-position: top center; 
+}
+
+.bg__part1 {
+  background-image: url("../images/bg1.svg");
+}
+
+.bg__part2 {
+  background-image: url("../images/bg2.svg");
+}
+
+// reset styles
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
