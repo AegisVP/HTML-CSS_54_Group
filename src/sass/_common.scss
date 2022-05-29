@@ -48,7 +48,7 @@ body {
 .button {
   display: inline-flex;
   justify-content: center;
-  align-items: center;
+  align-items: center;  
 
   margin: 0;
   padding: 7px 45px;
@@ -60,6 +60,7 @@ body {
   line-height: 30px;
   color: $color--white;
   background-color: $color--button__normal;
+  border: 0px solid transparent;
 
   border-radius: 25px;
   border: 0;

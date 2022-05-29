@@ -1,0 +1,91 @@
+.contact__title {
+    text-align: center;
+    font-family: Caveat Brush;
+    
+    @media screen and (max-width: 1279px) {
+            font-size: 24px;
+            line-height: 1.25;
+    }
+
+    @media screen and (min-width: 1280px) {
+            font-size: 36px;
+            line-height: 1.43;
+    }  
+}
+
+.contact__text {
+    text-align: center;
+    line-height: 1.25;
+    margin-top: 16px;
+
+    @media screen and (min-width: 768px) {
+        margin-top: 20px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        font-size: 18px;
+        line-height: 1.22;
+    } 
+}
+
+.contact__input,
+.contact__textarea {
+    display: block;  
+    height: 22px;
+    border-top: 1px transparent;
+    border-right: 1px transparent;  
+    border-bottom: 1px solid $color--main__dark-beige;
+    border-left: 1px transparent;
+    outline: none;
+
+    @media screen and (max-width: 767px) {
+        width: 100%;        
+    }
+
+    @media screen and (min-width: 768px) {
+        width: 336px;   
+        margin-left: auto;
+        margin-right: auto;     
+    }
+
+    @media screen and (min-width: 1280px) {
+        width: 394px;        
+    }
+
+    &::placeholder {        
+        line-height: 1.25;        
+        color: $color--text__light-beige;
+    }
+
+     &:out-of-range {
+        border-bottom: 2px solid red;
+    } 
+}
+
+.contact__input {
+    margin-top: 16px;
+
+    @media screen and (max-width: 767px) {
+        margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 16px;
+    }   
+}
+
+.contact__textarea {
+    resize: none;
+}
+
+.contact__button {
+    display: block;
+    margin-top: 32px;    
+    margin-left: auto;
+    margin-right: auto;   
+}
+
+
+
+
+
