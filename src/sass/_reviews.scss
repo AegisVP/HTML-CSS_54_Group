@@ -1,24 +1,24 @@
 $breakpoints: (
-  'mobile': 0,
-  'tablet': 320px,
-  'desktop-sm': 768px,
+  'mobile-sm': 320px,
+  'mobile-bg': 480px,
+  'tablet': 768px,
   'desktop-bg': 1280px,
 );
 
-@mixin mobile {
-  @media screen and (min-width: map-get($breakpoints, 'mobile')) {
+@mixin mobile-sm {
+  @media screen and (min-width: map-get($breakpoints, 'mobile-sm')) {
+    @content;
+  }
+}
+
+@mixin mobile-bg {
+  @media screen and (min-width: map-get($breakpoints, 'mobile-bg')) {
     @content;
   }
 }
 
 @mixin tablet {
   @media screen and (min-width: map-get($breakpoints, 'tablet')) {
-    @content;
-  }
-}
-
-@mixin desktop-sm {
-  @media screen and (min-width: map-get($breakpoints, 'desktop-sm')) {
     @content;
   }
 }
@@ -35,7 +35,7 @@ $breakpoints: (
   padding-left: 24px;
   padding-right: 24px;
 
-  @include desktop-sm {
+  @include tablet {
     min-width: 768px;
     width: 768px;
     padding-left: 32px;
@@ -76,7 +76,7 @@ $breakpoints: (
 .slide__side {
   display: none;
 
-  @include desktop-sm {
+  @include tablet {
     display: flex;
     width: 152px;
   }
@@ -90,7 +90,7 @@ $breakpoints: (
   width: 280px;
   min-width: 160px;
 
-  @include desktop-sm {
+  @include tablet {
     width: 336px;
   }
 
@@ -100,7 +100,7 @@ $breakpoints: (
 }
 
 .slide__center .slide__reviewer-image {
-  @include desktop-sm {
+  @include tablet {
     margin-top: 70px;
   }
 
@@ -113,7 +113,7 @@ $breakpoints: (
   display: flex;
   justify-content: center;
 
-  @include desktop-sm {
+  @include tablet {
     justify-content: space-between;
   }
 }
@@ -138,19 +138,23 @@ $breakpoints: (
 }
 
 .slide__reviewer-text {
-  margin: 8px 0 0 0;
-
+  margin: 8px auto 0 auto;
   text-align: center;
 
-  @include desktop-sm {
-    margin: 20px 0 0 0;
+  @include mobile-bg {
+    width: 420px;
+  }
+
+  @include tablet {
+    margin-top: 20px;
+    width: 100%;
   }
 }
 
 .reviews__pagination {
   text-align: center;
 
-  @include desktop-sm {
+  @include tablet {
     margin-top: 32px;
   }
 }
