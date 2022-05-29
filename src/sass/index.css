@@ -763,6 +763,12 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 704px;
     height: 260px;
     border-radius: 150px;
@@ -865,11 +871,8 @@ a {
 
 @media screen and (min-width: 768px) {
   .button {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
     margin-left: 54px;
+    margin-right: 0;
   }
 }
 
