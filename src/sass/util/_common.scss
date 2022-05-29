@@ -20,8 +20,12 @@ body {
 
 .bg__part1,
 .bg__part2 {
+  width: 100vw;
+  background-size: cover, 100vw 100%;
   background-repeat: no-repeat;
   background-position: top center; 
+
+  outline: 1px solid tomato;
 }
 
 .bg__part1 {
