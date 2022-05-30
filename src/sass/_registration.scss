@@ -1,6 +1,4 @@
-@import '../sass/util/mybase';
- .section__registration {
-     position: relative;
+.section__registration {
      background-color: $color--main__medium-beige;
 }
 
@@ -73,8 +71,10 @@
     }
       
     @media screen and (min-width: 1280px) {
-        width: 822px;
-        height: 260px; 
+            padding-top: 54px;
+            padding-bottom: 54px;
+            margin-left: 232px;
+            margin-right: 232px;
     }
 }
 
@@ -130,8 +130,21 @@
     }
 
     @media screen and (min-width: 1280px) {
+        position: relative;
         padding-left: 32px;
-        border-left: 1px solid rgba(171, 129, 108, 0.5);
+    }
+}
+
+.registration-form::before{
+
+    @media screen and (min-width: 1280px) {
+        position: absolute;
+        top: 50%;
+        left: -20%;
+        width: 40%;
+        border: 1px solid rgba(171, 129, 108, 0.5);
+        content: "";
+        transform: rotate(90deg);
     }
 }
 
@@ -155,7 +168,7 @@
 
         @media screen and (min-width: 1280px) {
             font-size: 18px;
-            margin-top: 54px;
+            margin-top: 0;
             margin-bottom: 13px;
         }
 }
