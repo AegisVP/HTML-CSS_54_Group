@@ -748,19 +748,41 @@ a {
   width: 100%;
   height: 100%;
   margin: 0;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  background-color: #fffff9;
-  -webkit-box-shadow: -4px -4px 4px rgba(171, 129, 108, 0.15), 4px 4px 4px rgba(171, 129, 108, 0.15);
-          box-shadow: -4px -4px 4px rgba(171, 129, 108, 0.15), 4px 4px 4px rgba(171, 129, 108, 0.15);
-  border-radius: 150px 150px 0px 0px;
+}
+
+@media screen and (max-width: 767px) {
+  .registration {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .section__title {
   margin-bottom: 20px;
 }
 
-.registration-info .registration-info__item:not(:first-child) {
+@media screen and (min-width: 768px) {
+  .registration-thumb {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .registration-info {
+    width: 90px;
+    margin-right: 56px;
+  }
+}
+
+.registration-info__item:not(:first-child) {
   margin-bottom: 20px;
 }
 
@@ -775,9 +797,19 @@ a {
   text-align: center;
 }
 
-.registration-form {
-  margin-left: 8px;
-  margin-right: 8px;
+@media screen and (min-width: 768px) {
+  .registration-info__date,
+  .registration-info__place,
+  .registration-info__price {
+    text-align: end;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .registration-form {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
 }
 
 .registration-form__text {
@@ -793,6 +825,20 @@ a {
     padding-top: 8px;
     color: #2e2520;
     border-top: 1px solid rgba(171, 129, 108, 0.5);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .registration-field {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -830,6 +876,13 @@ a {
 
 .registration-field__input:not(:last-child) {
   margin-bottom: 22px;
+}
+
+@media screen and (min-width: 768px) {
+  .registration-field__input {
+    width: 237px;
+    height: 22px;
+  }
 }
 
 .registration-field__lable {

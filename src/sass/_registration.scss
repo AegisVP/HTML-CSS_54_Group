@@ -2,11 +2,10 @@
  .section__registration {
      position: relative;
      background-color: $color--main__medium-beige;
-  }
+}
 
 .registration-pic { 
 
-    // @media screen and (max-width: 767px) {
         position: absolute; 
         width: 1px; 
         height: 1px; 
@@ -17,77 +16,61 @@
         clip-path: inset(100%); 
         clip: rect(0 0 0 0); 
         overflow: hidden; 
-    // } 
-    
+       
     // @media screen and (min-width: 768px) {
     //     position: absolute;
     // } 
 }
 
-.registration {
-    
+.registration { 
     width: 100%;
     height: 100%;
     margin: 0;
+
+    @media screen and (max-width: 767px) {
     padding-top: 32px;
     padding-bottom: 32px;
-
-    background-color: $color--main__light-beige;
-    box-shadow: -4px -4px 4px rgba(171, 129, 108, 0.15),
-    4px 4px 4px rgba(171, 129, 108, 0.15);
-    border-radius: 150px 150px 0px 0px;
 
     // background-color: $color--main__light-beige;
     // box-shadow: -4px -4px 4px rgba(171, 129, 108, 0.15),
     // 4px 4px 4px rgba(171, 129, 108, 0.15);
-    // border-radius: 150px 0px 0px 150px;
-    // // transform: rotate(90deg);
-
-    // @media screen and (min-width: 768px) {
-    //     width: 704px;
-    //     height: 260px;
-    //     border-radius: 150px;
-    // }
-
+    // border-radius: 150px 150px 0px 0px;
+    }
 }
 
 .section__title {
     margin-bottom: 20px;
 }
 
-// .registration-thumb {
-//     position: absolute; 
-//     width: 100%;
-//     height: 100%;
-//     margin: 0;
+.registration-thumb {
 
-    // background-color: $color--main__light-beige;
-    // box-shadow: -4px -4px 4px rgba(171, 129, 108, 0.15),
-    // 4px 4px 4px rgba(171, 129, 108, 0.15);
-    // border-radius: 150px 150px 0px 0px;
-    // transform: rotate(90deg);
+    @media screen and (min-width: 768px) {
+        display: flex;
+        justify-content: center;
+        align-items:center;
 
-    // @media screen and (min-width: 768px) {
-    //     display: flex;
-    // justify-content: center;
-    // align-items: center;
-    //     width: 704px;
-    //     height: 260px;
-    //     border-radius: 150px;
-    // }
-    
+        // background-color: $color--main__light-beige;
+        // box-shadow: -4px -4px 4px rgba(171, 129, 108, 0.15),
+        // 4px 4px 4px rgba(171, 129, 108, 0.15);
+        //border-radius: 150px;
+    }
+      
     // @media screen and (min-width: 1280px) {
     //     width: 822px;
     //     height: 260px; 
     // }
-
+}
 
 .registration-info {
 
+    @media screen and (min-width: 768px) {
+        width: 90px;
+        margin-right: 56px;
+    }
+}
 
 .registration-info__item:not(:first-child) {
     margin-bottom: 20px;
-}
 }
 
 .registration-info__date,
@@ -100,11 +83,18 @@
     font-size: 18px;
     line-height: 1.22;
     text-align: center;
+
+    @media screen and (min-width: 768px) {
+        text-align: end;
+    }
 }
  
 .registration-form {
-    margin-left: 8px;
-    margin-right: 8px;
+
+    @media screen and (max-width: 767px) {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
 }
 
 .registration-form__text {
@@ -122,6 +112,12 @@
 }
 
 .registration-field {
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        justify-content: center;
+        align-items:center;
+    }
   
 }
 
@@ -141,6 +137,11 @@
 
     &:not(:last-child) {
         margin-bottom: 22px;
+    }
+    
+    @media screen and (min-width: 768px) {
+        width: 237px;
+        height: 22px;
     }
 }
 
