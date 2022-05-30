@@ -1,0 +1,311 @@
+.program .container {
+  @include tablet {
+    display: flex;
+    margin-top: 35px;
+  }
+}
+
+.program__inner {
+  max-width: 336px;
+
+  @include tablet {
+    &:not(:last-of-type) {
+      margin-right: 32px;
+    }
+  }
+
+  @include desktop-bg {
+    max-width: 392px;
+
+    &:not(:last-of-type) {
+      margin-right: 142px;
+    }
+  }
+}
+
+.program__title {
+  font-family: $font--accent;
+  font-size: 24px;
+  line-height: 1.25;
+  text-align: center;
+  margin-bottom: 8px;
+
+  @include tablet {
+    text-align: left;
+  }
+
+  @include desktop-bg {
+    font-size: 36px;
+    line-height: 1.8;
+  }
+}
+
+.program__list {
+  margin-top: 8px;
+
+  @include desktop-bg {
+    margin-top: 20px;
+  }
+}
+
+.program__item:not(:last-child) {
+  margin-bottom: 8px;
+
+  @include desktop-bg {
+    margin-bottom: 16px;
+  }
+}
+
+.program__text {
+  @include desktop-bg {
+    font-size: 18px;
+    line-height: 1.22;
+  }
+}
+
+#more {
+  display: none;
+  margin-top: 8px;
+
+  @include desktop-bg {
+    display: block;
+    margin-top: 16px;
+  }
+}
+
+.btn-read-more {
+  font-family: $font--accent;
+  font-size: 18px;
+  line-height: 1.28;
+  text-align: center;
+  color: $color--main__dark-beige;
+  background-color: $color--white;
+  border: none;
+  margin-top: 16px;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 55px;
+  }
+
+  @include desktop-bg {
+    display: none;
+  }
+}
+
+.features {
+  text-align: center;
+
+  @include mobile-sm {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include desktop-bg {
+    min-width: 540px;
+  }
+}
+
+.features__item {
+  max-width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: $color--background__dark;
+  box-shadow: 0px 4px 4px rgba(171, 129, 108, 0.25);
+
+  @include mobile-sm {
+    width: calc(100% / 2);
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 48px;
+  }
+
+  &:nth-child(2n) {
+    margin-top: 35px;
+    margin-left: 20px;
+
+    @include tablet {
+      margin-left: 32px;
+    }
+
+    @include desktop-bg {
+      margin-left: 140px;
+      transform: translateY(90px);
+    }
+  }
+
+  @include tablet {
+    max-width: 152px;
+    height: 152px;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  @include desktop-bg {
+    max-width: 180px;
+    height: 180px;
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.features__item::before {
+  content: '';
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin-top: -35px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @include desktop-bg {
+    height: 95px;
+  }
+}
+
+.features__item:nth-child(1)::before {
+  background-image: url(./src/images/donut-1_mob.png);
+
+  @include x2 {
+    background-image: url(./src/images/donut-1@2x_mob.png);
+  }
+
+  @include tablet {
+    height: 90px;
+    background-image: url(./src/images/donut-1_tabl.png);
+
+    @include x2 {
+      background-image: url(./src/images/donut-1@2x_tabl.png);
+    }
+  }
+
+  @include desktop-bg {
+    background-image: url(./src/images/donut-1_desk.png);
+
+    @include x2 {
+      background-image: url(./src/images/donut-1@2x_desk.png);
+    }
+  }
+}
+
+.features__item:nth-child(2)::before {
+  background-image: url(./src/images/donut-2_mob.png);
+
+  @include x2 {
+    background-image: url(./src/images/donut-2@2x_mob.png);
+  }
+
+  @include tablet {
+    background-image: url(./src/images/donut-2_tabl.png);
+
+    @include x2 {
+      background-image: url(./src/images/donut-2@2x_tabl.png);
+    }
+  }
+
+  @include desktop-bg {
+    background-image: url(./src/images/donut-2_desk.png);
+
+    @include x2 {
+      background-image: url(./src/images/donut-2@2x_desk.png);
+    }
+  }
+}
+
+.features__item:nth-child(3)::before {
+  background-image: url(./src/images/donut-3_mob.png);
+
+  @include x2 {
+    background-image: url(./src/images/donut-3@2x_mob.png);
+  }
+
+  @include tablet {
+    background-image: url(./src/images/donut-3_tabl.png);
+
+    @include x2 {
+      background-image: url(./src/images/donut-3@2x_tabl.png);
+    }
+  }
+
+  @include desktop-bg {
+    background-image: url(./src/images/donut-3_desk.png);
+
+    @include x2 {
+      background-image: url(./src/images/donut-3@2x_desk.png);
+    }
+  }
+}
+
+.features__item:nth-child(4)::before {
+  background-image: url(./src/images/donut-4_mob.png);
+
+  @include x2 {
+    background-image: url(./src/images/donut-4@2x_mob.png);
+  }
+
+  @include tablet {
+    background-image: url(./src/images/donut-4_tabl.png);
+
+    @include x2 {
+      background-image: url(./src/images/donut-4@2x_tabl.png);
+    }
+  }
+
+  @include desktop-bg {
+    background-image: url(./src/images/donut-4_desk.png);
+
+    @include x2 {
+      background-image: url(./src/images/donut-4@2x_desk.png);
+    }
+  }
+}
+
+.features__desc {
+  font-family: $font--accent;
+  font-size: 18px;
+  line-height: 1.28;
+  color: $color--black;
+  margin-bottom: 4px;
+
+  @include tablet {
+    margin-bottom: 8px;
+  }
+
+  @include desktop-bg {
+    font-size: 24px;
+    line-height: 1.25;
+    margin-bottom: 16px;
+  }
+}
+
+.features__text {
+  font-size: 14px;
+  line-height: 1.21;
+  color: $color--black;
+  margin-bottom: 8px;
+
+  @include desktop-bg {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+.features__icon {
+  width: 19px;
+  height: 19px;
+
+  @include tablet {
+    width: 21px;
+    height: 21px;
+  }
+
+  @include desktop-bg {
+    width: 25px;
+    height: 25px;
+  }
+}
