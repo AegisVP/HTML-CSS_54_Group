@@ -6,6 +6,7 @@
 
 .registration-pic { 
 
+    @media screen and (max-width: 767px) {
         position: absolute; 
         width: 1px; 
         height: 1px; 
@@ -16,10 +17,11 @@
         clip-path: inset(100%); 
         clip: rect(0 0 0 0); 
         overflow: hidden; 
+    }
        
-    // @media screen and (min-width: 768px) {
-    //     position: absolute;
-    // } 
+    @media screen and (min-width: 768px) {
+        position: absolute;
+    } 
 }
 
 .registration { 
@@ -31,10 +33,10 @@
     padding-top: 32px;
     padding-bottom: 32px;
 
-    // background-color: $color--main__light-beige;
-    // box-shadow: -4px -4px 4px rgba(171, 129, 108, 0.15),
-    // 4px 4px 4px rgba(171, 129, 108, 0.15);
-    // border-radius: 150px 150px 0px 0px;
+    background-color: $color--main__light-beige;
+    box-shadow: -4px -4px 4px rgba(171, 129, 108, 0.15),
+    4px 4px 4px rgba(171, 129, 108, 0.15);
+    border-radius: 150px 150px 0px 0px;
     }
 }
 
@@ -49,10 +51,10 @@
         justify-content: center;
         align-items:center;
 
-        // background-color: $color--main__light-beige;
-        // box-shadow: -4px -4px 4px rgba(171, 129, 108, 0.15),
-        // 4px 4px 4px rgba(171, 129, 108, 0.15);
-        //border-radius: 150px;
+        background-color: $color--main__light-beige;
+        box-shadow: -4px -4px 4px rgba(171, 129, 108, 0.15),
+        4px 4px 4px rgba(171, 129, 108, 0.15);
+        border-radius: 150px;
     }
       
     // @media screen and (min-width: 1280px) {
@@ -70,7 +72,17 @@
 }
 
 .registration-info__item:not(:first-child) {
-    margin-bottom: 20px;
+
+    @media screen and (max-width: 767px) {
+        margin-bottom: 20px;
+    }
+}
+
+.registration-info__item:nth-child(2n) {
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 32px;
+    }
 }
 
 .registration-info__date,
@@ -108,7 +120,12 @@
             padding-top: 8px;
             color: $color--text__default;
             border-top: 1px solid rgba(171, 129, 108, 0.5);
-        }   
+        }  
+        
+        @media screen and (min-width: 768px) {
+            margin-top: 29px;
+            margin-bottom: 16px;
+        }
 }
 
 .registration-field {
@@ -116,7 +133,11 @@
     @media screen and (min-width: 768px) {
         display: flex;
         justify-content: center;
-        align-items:center;
+        align-items: flex-start;
+
+        &:not(:last-child){          
+            margin-bottom: 16px;
+        }
     }
   
 }

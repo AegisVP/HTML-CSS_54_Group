@@ -730,18 +730,26 @@ a {
   background-color: #fef3e4;
 }
 
-.registration-pic {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+@media screen and (max-width: 767px) {
+  .registration-pic {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+            clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .registration-pic {
+    position: absolute;
+  }
 }
 
 .registration {
@@ -754,6 +762,10 @@ a {
   .registration {
     padding-top: 32px;
     padding-bottom: 32px;
+    background-color: #fffff9;
+    -webkit-box-shadow: -4px -4px 4px rgba(171, 129, 108, 0.15), 4px 4px 4px rgba(171, 129, 108, 0.15);
+            box-shadow: -4px -4px 4px rgba(171, 129, 108, 0.15), 4px 4px 4px rgba(171, 129, 108, 0.15);
+    border-radius: 150px 150px 0px 0px;
   }
 }
 
@@ -772,6 +784,10 @@ a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    background-color: #fffff9;
+    -webkit-box-shadow: -4px -4px 4px rgba(171, 129, 108, 0.15), 4px 4px 4px rgba(171, 129, 108, 0.15);
+            box-shadow: -4px -4px 4px rgba(171, 129, 108, 0.15), 4px 4px 4px rgba(171, 129, 108, 0.15);
+    border-radius: 150px;
   }
 }
 
@@ -782,8 +798,16 @@ a {
   }
 }
 
-.registration-info__item:not(:first-child) {
-  margin-bottom: 20px;
+@media screen and (max-width: 767px) {
+  .registration-info__item:not(:first-child) {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .registration-info__item:nth-child(2n) {
+    margin-bottom: 32px;
+  }
 }
 
 .registration-info__date,
@@ -829,6 +853,13 @@ a {
 }
 
 @media screen and (min-width: 768px) {
+  .registration-form__text {
+    margin-top: 29px;
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
   .registration-field {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -836,9 +867,12 @@ a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .registration-field:not(:last-child) {
+    margin-bottom: 16px;
   }
 }
 
