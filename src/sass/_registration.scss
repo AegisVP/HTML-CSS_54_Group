@@ -4,7 +4,7 @@
      background-color: $color--main__medium-beige;
   }
 
-.registration-pic, .visually-hidden { 
+.registration-pic { 
 
     // @media screen and (max-width: 767px) {
         position: absolute; 
@@ -26,9 +26,11 @@
 
 .registration {
     
-    // width: 280px;
-    // height: 466px;
-    // margin: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding-top: 32px;
+    padding-bottom: 32px;
 
     // background-color: $color--main__light-beige;
     // box-shadow: -4px -4px 4px rgba(171, 129, 108, 0.15),
@@ -48,31 +50,31 @@
     margin-bottom: 20px;
 }
 
-.registration-thumb {
-    width: 280px;
-    height: 466px;
-    margin: 0;
+// .registration-thumb {
+//     width: 280px;
+//     height: 466px;
+//     margin: 0;
 
-    background-color: $color--main__light-beige;
-    box-shadow: -4px -4px 4px rgba(171, 129, 108, 0.15),
-    4px 4px 4px rgba(171, 129, 108, 0.15);
-    border-radius: 150px 0px 0px 150px;
-    // transform: rotate(90deg);
+//     background-color: $color--main__light-beige;
+//     box-shadow: -4px -4px 4px rgba(171, 129, 108, 0.15),
+//     4px 4px 4px rgba(171, 129, 108, 0.15);
+//     border-radius: 150px 0px 0px 150px;
+//     // transform: rotate(90deg);
 
-    @media screen and (min-width: 768px) {
-        display: flex;
-    justify-content: center;
-    align-items: center;
-        width: 704px;
-        height: 260px;
-        border-radius: 150px;
-    }
+//     @media screen and (min-width: 768px) {
+//         display: flex;
+//     justify-content: center;
+//     align-items: center;
+//         width: 704px;
+//         height: 260px;
+//         border-radius: 150px;
+//     }
     
-    @media screen and (min-width: 1280px) {
-        width: 822px;
-        height: 260px; 
-    }
-}
+//     @media screen and (min-width: 1280px) {
+//         width: 822px;
+//         height: 260px; 
+//     }
+// }
 
 .registration-info {
 
@@ -95,17 +97,8 @@
 }
  
 .registration-form {
-
-    @media screen and (max-width: 767px){
-        padding-left: 8px;
-        padding-right: 8px; 
-    }
-
-    @media screen and (min-width: 768px) {
-        &:not(:last-child) {
-        margin-bottom: 16px;
-        }
-    }
+    margin-left: 8px;
+    margin-right: 8px;
 }
 
 .registration-form__text {
@@ -114,20 +107,22 @@
 
         @media screen and (max-width: 767px) {
             text-align: center;
+            margin-top: 0;
             margin-bottom: 20px;
+            padding-top: 8px;
             color: $color--text__default;
             border-top: 1px solid rgba(171, 129, 108, 0.5);
         }   
 }
 
 .registration-field {
-
+  
 }
 
 .registration-field__input {
-    width: 100%;
+    width: 99%;
     height: 20px;
-       
+  
     background-color: $color--main__light-beige;
     border: transparent;
     border-bottom: 1px solid $color--main__dark-beige;

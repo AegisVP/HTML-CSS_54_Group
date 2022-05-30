@@ -730,7 +730,7 @@ a {
   background-color: #fef3e4;
 }
 
-.registration-pic, .visually-hidden {
+.registration-pic {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -744,42 +744,16 @@ a {
   overflow: hidden;
 }
 
+.registration {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
 .section__title {
   margin-bottom: 20px;
-}
-
-.registration-thumb {
-  width: 280px;
-  height: 466px;
-  margin: 0;
-  background-color: #fffff9;
-  -webkit-box-shadow: -4px -4px 4px rgba(171, 129, 108, 0.15), 4px 4px 4px rgba(171, 129, 108, 0.15);
-          box-shadow: -4px -4px 4px rgba(171, 129, 108, 0.15), 4px 4px 4px rgba(171, 129, 108, 0.15);
-  border-radius: 150px 0px 0px 150px;
-}
-
-@media screen and (min-width: 768px) {
-  .registration-thumb {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 704px;
-    height: 260px;
-    border-radius: 150px;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .registration-thumb {
-    width: 822px;
-    height: 260px;
-  }
 }
 
 .registration-info .registration-info__item {
@@ -797,17 +771,9 @@ a {
   text-align: center;
 }
 
-@media screen and (max-width: 767px) {
-  .registration-form {
-    padding-left: 8px;
-    padding-right: 8px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .registration-form:not(:last-child) {
-    margin-bottom: 16px;
-  }
+.registration-form {
+  margin-left: 8px;
+  margin-right: 8px;
 }
 
 .registration-form__text {
@@ -818,14 +784,16 @@ a {
 @media screen and (max-width: 767px) {
   .registration-form__text {
     text-align: center;
+    margin-top: 0;
     margin-bottom: 20px;
+    padding-top: 8px;
     color: #2e2520;
     border-top: 1px solid rgba(171, 129, 108, 0.5);
   }
 }
 
 .registration-field__input {
-  width: 100%;
+  width: 99%;
   height: 20px;
   background-color: #fffff9;
   border: transparent;
