@@ -10,7 +10,7 @@
   }
   @media screen and (min-width: 768px) {
     width: 768px;
-    padding: 35px 33px 0 33px;
+    padding: 35px 33px 69px 33px;
   }
 
   @media screen and (min-width: 1280px) {
@@ -128,6 +128,9 @@
 // title & subtitle
 
 .header__title {
+  position: relative;
+  z-index: 1;
+
   margin-bottom: 8px;
 
   font-family: 'Caveat Brush';
@@ -268,5 +271,24 @@
   .social__link:active &,
   .social__link:focus & {
     transform: scale(1.5);
+  }
+}
+
+// images
+
+.img__donuts {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+
+  @media screen and (min-width: 768px) {
+    left: auto;
+    right: 102px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    right: 0;
   }
 }
