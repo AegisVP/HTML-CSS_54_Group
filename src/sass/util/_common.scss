@@ -20,6 +20,12 @@ body {
   color: $color--text__default;
 }
 
+body.menu-open {
+  @media screen and (max-width: 1279.98px) {
+    overflow: hidden;
+  }
+}
+
 .bg__part1,
 .bg__part2 {
   background-repeat: no-repeat;

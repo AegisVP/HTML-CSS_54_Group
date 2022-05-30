@@ -3,8 +3,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   &__description {
@@ -12,12 +10,12 @@
   }
 
   &__title {
-    max-width: 392px;
-    margin-top: 0;
+    // max-width: 392px;
+    // margin-top: 0;
     margin-bottom: 10px;
 
-    font-family: $font--accent;
-    font-style: normal;
+    // font-family: $font--accent;
+    // font-style: normal;
     text-align: start;
   }
   &__text {
@@ -30,17 +28,13 @@
     margin-bottom: 16px;
   }
 }
-@media screen and (max-width: 767px) {
+
+@media screen and (max-width: 767.98px) {
   .about-us__container {
     flex-direction: column;
     align-items: center;
-    max-width: 320px;
-    padding-left: 20px;
-    padding-right: 20px;
   }
   .about-us__title {
-    font-size: 24px;
-    line-height: 30px;
     text-align: center;
     margin-bottom: 8px;
   }
@@ -93,17 +87,11 @@
   display: inline;
 }
 
-@media screen and (min-width: 768px) {
+@include tablet {
   .about-us__container {
     align-items: stretch;
-    min-width: 768px;
-    width: 768px;
-    padding-left: 32px;
-    padding-right: 32px;
   }
   .about-us__title {
-    font-size: 24px;
-    line-height: 30px;
     margin-bottom: 16px;
   }
   .about-us__text {
@@ -141,12 +129,12 @@
   }
 }
 
-@media screen and (min-width: 1280px) {
+@include desktop-bg {
   .about-us__container {
-    max-width: 1280px;
-    width: 1280px;
-    padding-left: 126px;
-    padding-right: 126px;
+    // position: relative;
+    padding-top: 111px;
+    // padding-left: 126px;
+    // padding-right: 126px;
   }
   .about-us__text {
     max-width: 392px;
@@ -154,20 +142,27 @@
     font-size: 18px;
     line-height: 22px;
   }
-  .about-us__title {
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 65px;
-  }
+  // .about-us__title {
+  //   font-weight: 400;
+  //   font-size: 36px;
+  //   line-height: 65px;
+  // }
   .read-more {
     display: none;
   }
   .extra-text {
     display: inline-block;
   }
-  .about-us__container::before {
-    background: no-repeat url(../images/spoon@2x_desk.png);
-    width: 178px;
+  .spoon {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 501px;
+    left: -76px;
+    background: no-repeat url(../images/spoon/spoon@1x-min.png);
+    width: 179px;
+    height: 422px;
     transform: rotate(12.22deg);
+    font-size: 0;
   }
 }
