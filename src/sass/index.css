@@ -750,13 +750,17 @@ a {
   margin: 0;
   padding-top: 32px;
   padding-bottom: 32px;
+  background-color: #fffff9;
+  -webkit-box-shadow: -4px -4px 4px rgba(171, 129, 108, 0.15), 4px 4px 4px rgba(171, 129, 108, 0.15);
+          box-shadow: -4px -4px 4px rgba(171, 129, 108, 0.15), 4px 4px 4px rgba(171, 129, 108, 0.15);
+  border-radius: 150px 150px 0px 0px;
 }
 
 .section__title {
   margin-bottom: 20px;
 }
 
-.registration-info .registration-info__item {
+.registration-info .registration-info__item:not(:first-child) {
   margin-bottom: 20px;
 }
 
