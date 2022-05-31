@@ -1,21 +1,26 @@
 <!-- Contact -->
-<section class="contact" id="contact">
+<section class="section" id="contact">
     <div class="container">
-        <h3 class="contact__title">Contact</h3>
+      <h2 class="section__title">Contact</h2>
+      <div class="contact__form">
         <p class="contact__text">We will answer any question!</p>
-        <form action="№" class="contact__form" aria-labelledby="contact-section">
+        <form action="№" class="contact__form">
 
-            <label class="contact__label">                        
-                <input class="contact__input" type="email" name="mail" placeholder="Email" required pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$"/>                        
-            </label>
-
-            <label class="contact__label">                
-                <textarea class="contact__textarea" name="comment" placeholder="Type your question"></textarea>
-              </label>
-
-
-            <button type="submit" class="contact__button button">Send</button>
-
+          <div class="contact__group">
+            <input class="contact__input" type="email" name="email" id="contact-mail" placeholder=" " required />
+            <span class="contact__border"></span>
+            <label for="contact-mail" class="contact__label">Email</label>
+          </div>
+  
+          <div class="contact__group">
+            <input class="contact__input" name="comment" type="text" id="user-question" placeholder=" " required minlength="3" />
+            <span class="contact__border"></span>
+            <label for="user-question" class="contact__label">Type your question</label>
+          </div>
+          
+          <button type="submit" class="contact__button button">Send</button>
         </form>
+      </div>
     </div>
-</section>
+  </section>
+  
