@@ -16,7 +16,7 @@ const swiper = new Swiper('.swiper', {
       crossFade: true,
    },
 
-   autoplay: {
-      delay: 3000,
-   },
+   // autoplay: {
+   //    delay: 3000,
+   // },
 });

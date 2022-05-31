@@ -1,15 +1,65 @@
-<section class="about-us">
-    
-       <!-- add img-->
-  
-    <h2 class="about-us__title"> About us</h2>
-    <p class="about-us__text">Oh My Donut is the shop which adores tasty deserts and spend hours to create sophisticated donuts which will save the
-    world!</p>
-    
-    <p class="about-us__text">Eva has been baking since she was six years old and over the last 49 years, she
-    has created hundreds of cakes for weddings and has baked for many celebrities. Eva and our shop have received multiple
-    awards & recognition for excellence.</p>
-    
-    <p class="about-us__text"> We are going to teach you how to cook with passion and sparkles in your eyes! We love what we do and believe you will
-    enjoy our cooking atmosphere!</p>
+<section class="about-us" id="aboutus">
+  <div class="container about-us__container">
+    <picture>
+      <source
+        srcset="
+          ./images/Cupcake-Box502-desk@1x.png 1x,
+          ./images/Cupcake-Box502-desk@2x.png 2x
+        "
+        type="image/png"
+        media="(min-width: 1280px)"
+      />
+
+      <source
+        srcset="
+          ./images/Cupcake-Box337-tablet@1x.png 1x,
+          ./images/Cupcake-Box337-tablet@2x.png 2x
+        "
+        type="image/jpeg"
+        media="(min-width: 768px)"
+      />
+
+      <source
+        srcset="
+          ./images/Cupcake-Box279-mob@1x.png 1x,
+          ./images/Cupcake-Box279-mob@2x.png 2x
+        "
+        type="image/jpeg"
+        media="(max-width: 767px)"
+      />
+
+      <img
+        src="./images/Cupcake-Box279-mob@1x.png"
+        alt="Cupcake-Box"
+        srcset="./images/Cupcake-Box279-mob@2x.png 2x"
+      />
+    </picture>
+
+    <div class="about-us__description">
+      <h2 class="section__title about-us__title">About us</h2>
+      <p class="about-us__text">
+        Oh My Donut is the shop which adores tasty deserts and spend hours to
+        create sophisticated donuts which will save the world!
+      </p>
+
+      <p class="about-us__text">
+        Eva has been baking since she was six years old and over the last 49
+        years, she has created hundreds of cakes for weddings and has baked for
+        many celebrities. Eva and our shop have received multiple awards &
+        recognition for excellence.
+      </p>
+
+      <input type="checkbox" id="read-more" hidden />
+      <p class="about-us__text extra-text">
+        We are going to teach you how to cook with passion and sparkles in your
+        eyes! We love what we do and believe you will enjoy our cooking
+        atmosphere!
+      </p>
+      <label for="read-more" class="read-more">
+        <span class="more">Read more</span>
+        <span class="less">Less</span>
+      </label>
+    </div>
+    <div class="spoon"></div>
+  </div>
 </section>
