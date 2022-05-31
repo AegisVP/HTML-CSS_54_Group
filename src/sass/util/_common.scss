@@ -2,6 +2,7 @@
 @import './variables';
 @import './media-mixin';
 
+@import './backgrounds';
 @import './container';
 @import './button';
 
@@ -29,110 +30,6 @@ body {
 body.menu-open {
   @media screen and (max-width: 1279.98px) {
     overflow: hidden;
-  }
-}
-
-.bg__part1 {
-  background-repeat: no-repeat, no-repeat;
-
-  @include x1 {
-    background-image: url('../images/header_donut_mobile@1x.png'),
-      url('../images/bg_vector_top_mobile.svg');
-    background-position: top left, 0 0;
-    background-size: auto, 100% 474px;
-  }
-
-  @include x2 {
-    background-image: url('../images/header_donut_mobile@2x.png'),
-      url('../images/bg_vector_top_mobile.svg');
-    background-position: top left, 0 0;
-    background-size: 120px, 100% 474px;
-  }
-
-  @include tablet {
-    @include x1 {
-      background-image: url('../images/header_donut_tablet@1x.png'),
-        url('../images/bg_vector_top_tablet.svg');
-      background-position: top right 100px, 0 0;
-      background-size: auto, 100% 650px;
-    }
-
-    @include x2 {
-      background-image: url('../images/header_donut_tablet@2x.png'),
-        url('../images/bg_vector_top_tablet.svg');
-      background-position: top right 100px, 0 0;
-      background-size: 390px, 100% 650px;
-    }
-  }
-
-  @include desktop-bg {
-    @include x1 {
-      background-image: url('../images/header_donut_desktop@1x.png'),
-        url('../images/bg_vector_top_desktop.svg');
-      background-position: top -30px right, 0 0;
-      background-size: auto, 100% 1036px;
-    }
-
-    @include x2 {
-      background-image: url('../images/header_donut_desktop@2x.png'),
-        url('../images/bg_vector_top_desktop.svg');
-      background-position: top -30px right, 0 0;
-      background-size: 716px, 100% 1036px;
-    }
-  }
-}
-
-.bg__part2 {
-  background-repeat: no-repeat, no-repeat, no-repeat;
-
-  @include x1 {
-    background-image: url('../images/plate_mobile@1x.png'),
-      url('../images/bg_vector_bottom_mobile.svg');
-    background-position: bottom right, top 7px center;
-    background-size: auto, 100% 90%;
-  }
-
-  @include x2 {
-    background-image: url('../images/plate_mobile@2x.png'),
-      url('../images/bg_vector_bottom_mobile.svg');
-    background-position: bottom right, top 7px center;
-    background-size: 84px, 100% 90%;
-  }
-
-  @include tablet {
-    @include x1 {
-      background-image: url('../images/confetti_tablet@1x.png'),
-        url('../images/plate_tablet@1x.png'),
-        url('../images/bg_vector_bottom_tablet.svg');
-      background-position: bottom 500px right, bottom right, top 7px center;
-      background-size: auto, auto, 100% 90%;
-    }
-
-    @include x2 {
-      background-image: url('../images/confetti_tablet@2x.png'),
-        url('../images/plate_tablet@2x.png'),
-        url('../images/bg_vector_bottom_tablet.svg');
-      background-position: bottom 500px right, bottom right, top 7px center;
-      background-size: 287px, 184px, 100% 90%;
-    }
-  }
-
-  @include desktop-bg {
-    @include x1 {
-      background-image: url('../images/confetti_desktop@1x.png'),
-        url('../images/plate_desktop@1x.png'),
-        url('../images/bg_vector_bottom_desktop.svg');
-      background-position: bottom 320px right, bottom right, top 7px center;
-      background-size: auto, auto, 100% 100%;
-    }
-
-    @include x2 {
-      background-image: url('../images/confetti_desktop@2x.png'),
-        url('../images/plate_desktop@2x.png'),
-        url('../images/bg_vector_bottom_desktop.svg');
-      background-position: bottom 320px right, bottom right, top 7px center;
-      background-size: 566px, 302px, 100% 100%;
-    }
   }
 }
 
