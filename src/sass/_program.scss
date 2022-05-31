@@ -1,3 +1,9 @@
+.program {
+  @include desktop-bg {
+    padding-bottom: 80px;
+  }
+}
+
 .program .container {
   @include tablet {
     display: flex;
@@ -94,11 +100,8 @@
 
 .features {
   text-align: center;
-
-  @include mobile-sm {
-    display: flex;
-    flex-wrap: wrap;
-  }
+  display: flex;
+  flex-wrap: wrap;
 
   @include desktop-bg {
     min-width: 540px;
@@ -111,10 +114,7 @@
   border-radius: 50%;
   background-color: $color--background__dark;
   box-shadow: 0px 4px 4px rgba(171, 129, 108, 0.25);
-
-  @include mobile-sm {
-    width: calc(100% / 2);
-  }
+  width: calc(100% / 2);
 
   &:not(:last-child) {
     margin-bottom: 48px;
@@ -163,104 +163,107 @@
   background-repeat: no-repeat;
   background-size: contain;
 
+  @include tablet {
+    height: 90px;
+  }
+
   @include desktop-bg {
     height: 95px;
   }
 }
 
 .features__item:nth-child(1)::before {
-  background-image: url(./src/images/donut-1_mob.png);
+  background-image: url(../images/donut-1_mob.png);
 
   @include x2 {
-    background-image: url(./src/images/donut-1@2x_mob.png);
+    background-image: url(../images/donut-1@2x_mob.png);
   }
 
   @include tablet {
-    height: 90px;
-    background-image: url(./src/images/donut-1_tabl.png);
+    background-image: url(../images/donut-1_tabl.png);
 
     @include x2 {
-      background-image: url(./src/images/donut-1@2x_tabl.png);
+      background-image: url(../images/donut-1@2x_tabl.png);
     }
   }
 
   @include desktop-bg {
-    background-image: url(./src/images/donut-1_desk.png);
+    background-image: url(../images/donut-1_desk.png);
 
     @include x2 {
-      background-image: url(./src/images/donut-1@2x_desk.png);
+      background-image: url(../images/donut-1@2x_desk.png);
     }
   }
 }
 
 .features__item:nth-child(2)::before {
-  background-image: url(./src/images/donut-2_mob.png);
+  background-image: url(../images/donut-2_mob.png);
 
   @include x2 {
-    background-image: url(./src/images/donut-2@2x_mob.png);
+    background-image: url(../images/donut-2@2x_mob.png);
   }
 
   @include tablet {
-    background-image: url(./src/images/donut-2_tabl.png);
+    background-image: url(../images/donut-2_tabl.png);
 
     @include x2 {
-      background-image: url(./src/images/donut-2@2x_tabl.png);
+      background-image: url(../images/donut-2@2x_tabl.png);
     }
   }
 
   @include desktop-bg {
-    background-image: url(./src/images/donut-2_desk.png);
+    background-image: url(../images/donut-2_desk.png);
 
     @include x2 {
-      background-image: url(./src/images/donut-2@2x_desk.png);
+      background-image: url(../images/donut-2@2x_desk.png);
     }
   }
 }
 
 .features__item:nth-child(3)::before {
-  background-image: url(./src/images/donut-3_mob.png);
+  background-image: url(../images/donut-3_mob.png);
 
   @include x2 {
-    background-image: url(./src/images/donut-3@2x_mob.png);
+    background-image: url(../images/donut-3@2x_mob.png);
   }
 
   @include tablet {
-    background-image: url(./src/images/donut-3_tabl.png);
+    background-image: url(../images/donut-3_tabl.png);
 
     @include x2 {
-      background-image: url(./src/images/donut-3@2x_tabl.png);
+      background-image: url(../images/donut-3@2x_tabl.png);
     }
   }
 
   @include desktop-bg {
-    background-image: url(./src/images/donut-3_desk.png);
+    background-image: url(../images/donut-3_desk.png);
 
     @include x2 {
-      background-image: url(./src/images/donut-3@2x_desk.png);
+      background-image: url(../images/donut-3@2x_desk.png);
     }
   }
 }
 
 .features__item:nth-child(4)::before {
-  background-image: url(./src/images/donut-4_mob.png);
+  background-image: url(../images/donut-4_mob.png);
 
   @include x2 {
-    background-image: url(./src/images/donut-4@2x_mob.png);
+    background-image: url(../images/donut-4@2x_mob.png);
   }
 
   @include tablet {
-    background-image: url(./src/images/donut-4_tabl.png);
+    background-image: url(../images/donut-4_tabl.png);
 
     @include x2 {
-      background-image: url(./src/images/donut-4@2x_tabl.png);
+      background-image: url(../images/donut-4@2x_tabl.png);
     }
   }
 
   @include desktop-bg {
-    background-image: url(./src/images/donut-4_desk.png);
+    background-image: url(../images/donut-4_desk.png);
 
     @include x2 {
-      background-image: url(./src/images/donut-4@2x_desk.png);
+      background-image: url(../images/donut-4@2x_desk.png);
     }
   }
 }
@@ -269,6 +272,7 @@
   font-family: $font--accent;
   font-size: 18px;
   line-height: 1.28;
+  white-space: nowrap;
   color: $color--black;
   margin-bottom: 4px;
 
