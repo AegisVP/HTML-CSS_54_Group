@@ -1,60 +1,103 @@
-<section id="program">
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Montserrat:wght@400;500&display=swap" />
+            
+    <link rel="stylesheet" href="../sass/index.css" />
+</head>
+<body>
+     -->
+<section class="program" id="program">
     <div class="container">
-        <div>
-            <h2>Program</h2>
+        <div class="program__inner">
+            <h2 class="section__title program__title--left">Program</h2>
 
-            <p>Indulge in this immersive sweet treat experience with The Chef Donut Queen
-                in her New York donut shop!</p>
+            <p class="program__text">Indulge in this immersive sweet treat experience with The Chef Donut Queen in her
+                New York donut shop!</p>
 
-            <ul>
-                <li>> A stand up history of donuts</li>
-                <li>> Make 3 donut flavors of your choice</li>
-                <li>> Enjoy all-you-can-eat donuts</li>
-                <li>> Cocktail pairings and coffee included</li>
-                <li>> Photoshoot by professional photographer</li>
-                <li>> Secret receipt of cooking from Eva</li>
-                <li>> All products are included in the price</li>
+            <ul class="program__list">
+                <li class="program__item">
+                    > A stand up history of donuts
+                </li>
+                <li class="program__item">
+                    > Make 3 donut flavors of your choice
+                </li>
+                <li class="program__item">
+                    > Enjoy all-you-can-eat donuts
+                </li>
+                <li class="program__item">
+                    > Cocktail pairings and coffee included
+                </li>
+                <li class="program__item">
+                    > Photoshoot by professional photographer
+                </li>
+                <li class="program__item">
+                    > Secret receipt of cooking from Eva
+                </li>
+                <li class="program__item">
+                    > All products are included in the price
+                </li>
             </ul>
 
-            <button type="button">Read more</button>
+            <p class="program__text" id="more">Come with your dear people and friends and you will spend an
+                unforgettable time and will become a real professional in donuts cooking!</p>
 
-            <p>Come with your dear people and friends
-                and you will spend an unforgettable time and
-                will become a real professional
-                in donuts cooking!</p>
+            <button class="btn-read-more" type="button" id="btn" onclick="readMore()">Read more</button>
+
         </div>
 
-        <div>
-            <ul>
-                <li>
-                    <p>Type of the event</p>
-                    <p>Cooking classes</p>
-                    <svg class="program__icon">
-                        <use href="./images/sprite.svg#prog-hat"></use>
-                    </svg>
+        <div class="program__inner">
+            <ul class="features">
+                <li class="features__item">
+                    <div class="features__inner">
+                        <p class="features__desc">Type of the event</p>
+                        <p class="features__text">Cooking classes</p>
+                        <svg class="features__icon">
+                            <use href="./images/sprite.svg#prog-hat"></use>
+                        </svg>
+                    </div>
                 </li>
-                <li>
-                    <p>Number of guests</p>
-                    <p>1 to 20</p>
-                    <svg class="program__icon">
-                        <use href="./images/sprite.svg#prog-people"></use>
-                    </svg>
+                <li class="features__item">
+                    <div>
+                        <p class="features__desc">Number of guests</p>
+                        <p class="features__text">1 to 20</p>
+                        <svg class="features__icon">
+                            <use href="./images/sprite.svg#prog-people"></use>
+                        </svg>
+                    </div>
                 </li>
-                <li>
-                    <p>Time of the event</p>
-                    <p>18:30 (2.5 hours)</p>
-                    <svg class="program__icon">
-                        <use href="./images/sprite.svg#prog-clock"></use>
-                    </svg>
+                <li class="features__item">
+                    <div>
+                        <p class="features__desc">Time of the event</p>
+                        <p class="features__text">18:30 (2.5 hours)</p>
+                        <svg class="features__icon">
+                            <use href="./images/sprite.svg#prog-clock"></use>
+                        </svg>
+                    </div>
                 </li>
-                <li>
-                    <p>The host speaks</p>
-                    <p>English, French</p>
-                    <svg class="program__icon">
-                        <use href="./images/sprite.svg#prog-chat"></use>
-                    </svg>
+                <li class="features__item">
+                    <div>
+                        <p class="features__desc">The host speaks</p>
+                        <p class="features__text">English, French</p>
+                        <svg class="features__icon">
+                            <use href="./images/sprite.svg#prog-chat"></use>
+                        </svg>
+                    </div>
                 </li>
             </ul>
         </div>
     </div>
 </section>
+
+<script src="../program.js"></script>
+
+<!-- </body>
+</html> -->
