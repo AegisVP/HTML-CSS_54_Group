@@ -1,9 +1,3 @@
-.program {
-  @include desktop-bg {
-    padding-bottom: 80px;
-  }
-}
-
 .program .container {
   @include tablet {
     display: flex;
@@ -29,20 +23,11 @@
   }
 }
 
-.program__title {
-  font-family: $font--accent;
-  font-size: 24px;
-  line-height: 1.25;
-  text-align: center;
+.program__title--left {
   margin-bottom: 8px;
 
   @include tablet {
     text-align: left;
-  }
-
-  @include desktop-bg {
-    font-size: 36px;
-    line-height: 1.8;
   }
 }
 
@@ -50,6 +35,7 @@
   margin-top: 8px;
 
   @include desktop-bg {
+    font-size: 18px;
     margin-top: 20px;
   }
 }
@@ -101,54 +87,48 @@
 .features {
   text-align: center;
   display: flex;
-  flex-wrap: wrap;
-
-  @include desktop-bg {
-    min-width: 540px;
-  }
+  flex-direction: column;
 }
 
 .features__item {
-  max-width: 130px;
+  width: 130px;
   height: 130px;
   border-radius: 50%;
   background-color: $color--background__dark;
   box-shadow: 0px 4px 4px rgba(171, 129, 108, 0.25);
-  width: calc(100% / 2);
-
-  &:not(:last-child) {
-    margin-bottom: 48px;
-  }
-
-  &:nth-child(2n) {
-    margin-top: 35px;
-    margin-left: 20px;
-
-    @include tablet {
-      margin-left: 32px;
-    }
-
-    @include desktop-bg {
-      margin-left: 140px;
-      transform: translateY(90px);
-    }
-  }
 
   @include tablet {
-    max-width: 152px;
+    width: 152px;
     height: 152px;
-
-    &:not(:last-child) {
-      margin-bottom: 16px;
-    }
   }
 
   @include desktop-bg {
-    max-width: 180px;
+    width: 180px;
     height: 180px;
+  }
 
-    &:not(:last-child) {
-      margin-bottom: 40px;
+  &:nth-child(2n) {
+    margin-top: -95px;
+    margin-left: 150px;
+
+    @include tablet {
+      margin-top: -100px;
+      margin-left: 185px;
+    }
+
+    @include desktop-bg {
+      margin-top: -50px;
+      margin-left: 320px;
+    }
+  }
+
+  &:nth-child(3) {
+    @media screen and (max-width: 767px) {
+      margin-top: 30px;
+    }
+
+    @include desktop-bg {
+      margin-top: -50px;
     }
   }
 }
