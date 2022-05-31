@@ -16,6 +16,7 @@
   @media screen and (min-width: 1280px) {
     width: 1280px;
     padding: 35px 20px 0 20px;
+
   }
 }
 
@@ -112,6 +113,8 @@
 }
 
 .navigation__link {
+    position: relative;
+      z-index: 1;
   font-size: 18px;
   line-height: 22px;
   transition: color 250ms linear;
@@ -133,7 +136,7 @@
 
   margin-bottom: 8px;
 
-  font-family: 'Caveat Brush';
+  font-family: $font--accent;
   text-align: center;
   font-weight: 400;
   font-size: 30px;
@@ -283,7 +286,7 @@
   width: auto;
   height: auto;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) {  
     left: auto;
     right: 102px;
   }
