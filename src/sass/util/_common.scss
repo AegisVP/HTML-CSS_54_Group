@@ -7,6 +7,7 @@
 
 .is-hidden {
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
 }
 
@@ -16,12 +17,13 @@
 body {
   margin: 0;
   padding: 0;
+
   font-family: 'Montserrat', sans-serif; 
   color: $color--text__default;
 
-  @include desktop-bg {
-    background-color: $color--background__light;
-  }
+  background-color: $color--white;
+  @include desktop-bg {background-color: $color--background__light;}
+
 }
 
 body.menu-open {
