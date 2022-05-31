@@ -1,9 +1,5 @@
 @import '../sass/util/mybase';
 
-.section__registration {
-   
-}
-
 .registration-pic { 
 
     // @media screen and (max-width: 767px) {
@@ -64,7 +60,7 @@
     @media screen and (min-width: 768px) {
         display: flex;
         justify-content: center;
-        align-items:center;
+        align-items: flex-end;
         padding-top: 40px;
         padding-bottom: 66px;
 
@@ -87,7 +83,7 @@
 
     @media screen and (min-width: 768px) and (max-width: 1279px) {
         width: 90px;
-        margin-right: 56px;
+        margin-right: 32px;
     }
 
     @media screen and (min-width: 1280px) {
@@ -148,7 +144,7 @@
 
     @media screen and (min-width: 768px) {
         position: absolute;
-        top: 50%;
+        top: 60%;
         left: -20%;
         width: 40%;
         border-top: 1px solid rgba(171, 129, 108, 0.5);
@@ -206,19 +202,31 @@
   
 }
 
+.registration-field__input:out-of-range {
+    border-bottom: 2px solid red;
+}
 .registration-field__input {
     width: 99%;
     height: 20px;
-  
-    background-color: $color--main__light-beige;
-    border: transparent;
+
+    border-top: 1px transparent;
+    border-right: 1px transparent;  
     border-bottom: 1px solid $color--main__dark-beige;
+    border-left: 1px transparent;
+    outline: none;
+  
+    // background-color: $color--main__light-beige;
+    // border: 1px solid transparent;
+    // border-bottom: 1px solid $color--main__dark-beige;
+    // outline: none;   
 
     &::placeholder {
-        color: rgba(171, 129, 108, 0.5);
+        color: $color--text__light-beige;
         font-size: 16px;
-        line-height: 1,25;
+        line-height: 1.25;   
     }
+
+   
        
     @media screen and (min-width: 768px) {
         width: 237px;
@@ -249,10 +257,63 @@
     margin-right: auto;
 
     @media screen and (min-width: 768px) {
-            margin: 0 0 0 54px;
+            margin: 20px 0 0 54px;
     }
 
     @media screen and (min-width: 1280px) {
         margin: 0 0 0 32px;
     }
 }
+
+
+// .registration-field__input {
+//   display: block;
+//   width: 100%;
+//   height: 22px;
+//   border-top: 1px transparent;
+//   border-right: 1px transparent;
+//   border-bottom: 1px solid $color--main__dark-beige;
+//   border-left: 1px transparent;
+//   outline: none;    
+//   color: $color--button__normal;  
+//   @include desktop-bg {
+//     background-color: $color--background__light;
+//   }
+// }
+// .registration-field__input:focus ~ .registration-field__label,
+// .registration-field__input:not(:placeholder-shown) ~ .registration-field__label {
+//   bottom: -12px;
+//   font-weight: 500;
+//   font-size: 12px;
+//   line-height: 1;  
+//   color: $color--main__dark-beige;  
+// }
+// .registration-field__border::after {
+//   content: "";
+//   background-color: $color--main__dark-beige;
+//   position: absolute;
+//   height: 2px;
+//   width: 0;
+//   bottom: 0;
+//   transition: width 200ms cubic-bezier(0.4, 0, 0.2, 1);
+// }
+// .registration-field__input:focus ~ .registration-field__border::after {
+//   width: 100%;
+// }
+// .registration-field__label {  
+//   position: absolute;
+//   left: 0;
+//   bottom: 0;
+//   display: block;
+//   line-height: 1.25;
+//   color: $color--text__light-beige;  
+  
+//   pointer-events: none;
+// } 
+// .registration-field__input:not(:placeholder-shown):required:invalid  ~ .registration-field__label {
+//   color: red;
+// }
+// .registration-field__input:not(:placeholder-shown):required:invalid ~ .registration-field__border::after {
+//   width: 100%;
+//   background-color: red;
+// }
