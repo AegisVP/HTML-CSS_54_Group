@@ -7,6 +7,8 @@
 
     text-align: center;
     font-family: $font--accent;
+    font-size: 24px;
+    font-weight: 400;
     font-style: normal;
     line-height: 1.25;
     color: $color--main__like-black;
@@ -22,11 +24,12 @@
 .container {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px;
 
   @media screen and (max-width: 767.98px) {
-    max-width: 320px;
+    min-width: 320px;
+    max-width: 480px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   @include tablet {
