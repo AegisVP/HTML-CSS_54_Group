@@ -10,11 +10,11 @@
     font-size: 24px;
     font-weight: 400;
     font-style: normal;
+    font-weight: 400;
     line-height: 1.25;
     color: $color--main__like-black;
 
     @include desktop-bg {
-      font-weight: 400;
       font-size: 36px;
       line-height: 1.8;
     }
