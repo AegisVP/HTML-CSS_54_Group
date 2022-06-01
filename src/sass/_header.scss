@@ -40,11 +40,11 @@
 
     @include tablet {
       top: -35px;
-      left: 289px;
-      width: 378px;
+      left: 280px;
+      width: 397px;
       height: 396px;
       
-      background-size: 378px 396px;
+      background-size: 400px 391px;
       background-image: url('../images/header_donut_tablet@1x.png');
       @include x2 {background-image: url('../images/header_donut_tablet@2x.png');}
     }
