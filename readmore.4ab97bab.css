@@ -1,0 +1,2 @@
+.read-more{max-width:200px;border:1px solid #000;padding:10px 30px}p{margin:20px 0}.extra-text{display:none}#read-more:checked~.extra-text{display:block}.less,#read-more:checked~.read-more .more{display:none}#read-more:checked~.read-more .less{display:inline}
+/*# sourceMappingURL=readmore.4ab97bab.css.map */
