@@ -15,11 +15,16 @@
     }
 }    
 
-.section-registration__pic {
-    // background image donut
+.registration__picture-top {
+    // background image donut    
     @media screen and (min-width: 768px) {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+      
     background-repeat: no-repeat;
-    background-position: 3% 3%;
+    background-position: -4% -10%;
     background-size: 196.13px 200.69px;
     background-image: url('../images/donut_tabl.png');
    
@@ -31,7 +36,7 @@
         }
 
     @media screen and (min-width: 1280px) {
-        background-position:  10% 50%;
+        background-position:  2% 5%;
         background-size: 196.13px 200.69px;
 
          background-image: url('../images/donut_desk.png');
@@ -44,7 +49,41 @@
          } 
     }
 
+    // .registration__picture-down {
+    //     // background image donut
+              
+    //     @media screen and (min-width: 768px) {
+    //         position: absolute;
+    //         z-index: 1;
+    //         width: 100%;
+    //         height: 100%;
 
+    //         background-repeat: no-repeat;
+    //         background-position:  95% 65%;
+    //         background-size:  345.35px 190.93px;
+    //         background-image: url('../images/confetti_tabl.png');
+        
+    //     @media (min-device-pixel-ratio: 2),
+    //            (min-resolution: 192dpi),
+    //            (min-resolution: 2dppx) {
+    //             background-image: url('../images/confetti@2x_tabl.png ');
+    //            }
+    //         }
+    
+    //     @media screen and (min-width: 1280px) {
+    //         background-position:  100% 63%;
+    //         background-size: 544.01px 300.76px;
+    
+    //          background-image: url('../images/confetti_desk.png');
+       
+    //         @media (min-device-pixel-ratio: 2),
+    //                 (min-resolution: 192dpi),
+    //                 (min-resolution: 2dppx) {
+    //                  background-image: url('../images/confetti@2x_desk.png');
+    //                 }
+    //          } 
+    //     }
+   
 .registration { 
     width: 100%;
     height: 100%;
@@ -61,7 +100,7 @@
     }
 }
 
-.section__title {
+.registration .section__title {
     margin-bottom: 20px;
 
     @media screen and (min-width: 1280px) {
@@ -72,6 +111,8 @@
 .registration-thumb {
 
     @media screen and (min-width: 768px) {
+        position: relative;
+        z-index: 2;
         display: flex;
         justify-content: center;
         align-items: flex-end;
