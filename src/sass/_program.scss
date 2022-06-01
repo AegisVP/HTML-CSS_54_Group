@@ -31,6 +31,10 @@
       margin-right: 142px;
       max-width: 392px;
     }
+
+    &:not(:first-of-type) {
+      max-width: 500px;
+    }
   }
 }
 
@@ -123,8 +127,8 @@
     margin-left: 150px;
     animation-direction: reverse;
 
-    @include mobile-bg {
-      margin-left: 250px;
+    @media screen and (min-width: 350px) {
+      margin-left: auto;
     }
 
     @include tablet {
