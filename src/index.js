@@ -8,11 +8,10 @@ const openModalFrmList = document.getElementsByTagName('form');
 const closeModalBtnList = document.querySelectorAll('[data-modal-close]');
 const modalRef = document.querySelector('[data-modal]');
 
-if (openMenuBtnRefList.length) for (openMenuBtnRef of openMenuBtnRefList) {openMenuBtnRef.addEventListener('click', openMenu);};
-if (closeMenuBtnRefList.length) for (closeMenuBtnRef of closeMenuBtnRefList) {closeMenuBtnRef.addEventListener('click', closeMenu);};
-if (openModalFrmList.length) for (openModalFrm of openModalFrmList) {openModalFrm.addEventListener('submit', openModalForm);}
-if (openModalBtnList.length)for (openModalBtn of openModalBtnList) {openModalBtn.addEventListener('click', openModal);};
-if (closeModalBtnList.length) for (closeModalBtn of closeModalBtnList) {closeModalBtn.addEventListener('click', closeModal);};
+if (openMenuBtnRefList.length) for (const openMenuBtnRef of openMenuBtnRefList) {openMenuBtnRef.addEventListener('click', openMenu);};
+if (closeMenuBtnRefList.length) for (const closeMenuBtnRef of closeMenuBtnRefList) {closeMenuBtnRef.addEventListener('click', closeMenu);};
+if (openModalBtnList.length) for (const openModalBtn of openModalBtnList) {openModalBtn.addEventListener('click', openModal);};
+if (closeModalBtnList.length) for (const closeModalBtn of closeModalBtnList) {closeModalBtn.addEventListener('click', closeModal);};
 
 function openModalForm(form) {
   form?.preventDefault();
