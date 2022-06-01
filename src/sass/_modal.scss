@@ -1,4 +1,4 @@
-.modal__backdrop{
+.modal__backdrop {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
@@ -19,72 +19,72 @@
     opacity: 1;
     background-color: rgba(254, 243, 228, 0.9);
     pointer-events: all;
+    cursor: pointer;
     visibility: visible;
     z-index: 2;
   }
 }
 
 .modal {
-    opacity: 1;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: calc(100% - 30px);
-    height: 400px;
-    background-color: $color--main__medium-beige;
-    
-
-    @media screen and (min-width:480px) and (max-width:1199px){
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(100% - 30px);
+  height: 400px;
+  background-color: $color--main__medium-beige;
+  cursor: default;
+  
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
     max-width: 450px;
-    }
-   
-    @media screen and (min-width:1200px){
+  }
+
+  @media screen and (min-width: 1200px) {
     width: 528px;
-    }
+  }
 
-    background: #FFFFFF;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
-    0px 1px 1px rgba(0, 0, 0, 0.14), 
+  background: #ffffff;
+  box-shadow: 
+    0px 1px 3px rgba(0, 0, 0, 0.12), 
+    0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
+  border-radius: 4px;
 
-    transform:translate(-50%, -50%) scale(1);
-    transition: transforme 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
-    &-icon{
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms linear;
+
+  &-icon {
     width: 18px;
-    height:18px ;
+    height: 18px;
     fill: var(--text-color);
-    }
+  }
 
-    &__button{
+  &__button {
     position: absolute;
     top: 8px;
     right: 8px;
 
-    display: flex; 
+    display: flex;
     align-items: center;
     justify-content: center;
 
     width: 30px;
     height: 30px;
-    background: #FFFFFF;
+    background: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     cursor: pointer;
-    }
+  }
 }
-.modal__text{
-  margin-top: 150px;
-    font-family: 'Caveat Brush';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 65px;
-   
-    
-    text-align: center;
-    
-    color: #2E2520; 
-}
+.modal__text {
+  margin-top: 135px;
+  font-family: 'Caveat Brush';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 65px;
 
+  text-align: center;
+
+  color: #2e2520;
+}
