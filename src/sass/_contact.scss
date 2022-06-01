@@ -1,3 +1,15 @@
+.contact__section {
+  padding-top: 32px;
+
+  @include tablet {
+    padding-top: 78px;
+  }
+
+  @include desktop-bg {
+    padding-top: 160px;    
+  }
+}
+
 .contact__text {
   text-align: center;
   line-height: 1.25;
@@ -30,15 +42,15 @@
   } 
 }
 
-.contact__group:not(:last-child) { 
-  margin-bottom: 20px;
+.contact__group:not(:first-child) { 
+  margin-top: 20px;
 
   @include tablet {
-    margin-bottom: 16px;
+    margin-top: 16px;
   }  
 
   @include desktop-bg {
-    margin-bottom: 15px;
+    margin-top: 15px;
   } 
 }  
 
@@ -51,12 +63,11 @@
   border-bottom: 1px solid $color--main__dark-beige;
   border-left: 1px transparent;
   outline: none;    
-  color: $color--button__normal;  
+  color: $color--button__normal;
+  background-color: transparent;
+}    
 
-  @include desktop-bg {
-    background-color: $color--background__light;
-  }
-}
+ 
 
 .contact__input:focus ~ .contact__label,
 .contact__input:not(:placeholder-shown) ~ .contact__label {
