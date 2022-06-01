@@ -1,7 +1,11 @@
+.program {
+  padding-top: 65px;
+  padding-bottom: 40px;
+}
+
 .program .container {
   @include tablet {
     display: flex;
-    margin-top: 35px;
   }
 }
 
@@ -97,6 +101,10 @@
   background-color: $color--background__dark;
   box-shadow: 0px 4px 4px rgba(171, 129, 108, 0.25);
 
+  &:hover {
+    animation: spin 1200ms ease-in-out 1;
+  }
+
   @include tablet {
     width: 152px;
     height: 152px;
@@ -110,6 +118,7 @@
   &:nth-child(2n) {
     margin-top: -95px;
     margin-left: 150px;
+    animation-direction: reverse;
 
     @include tablet {
       margin-top: -100px;
@@ -149,6 +158,16 @@
 
   @include desktop-bg {
     height: 95px;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }
 
