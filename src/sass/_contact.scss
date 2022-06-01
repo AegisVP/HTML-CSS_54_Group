@@ -71,6 +71,7 @@
 
 // .contact__input:focus ~ .contact__label,
 .contact__input:not(:placeholder-shown) ~ .contact__label {
+  display: block;
   bottom: -12px;
   font-weight: 500;
   font-size: 12px;
@@ -92,6 +93,7 @@
 }
 
 .contact__label {  
+  display: none;
   position: absolute;
   left: 0;
   bottom: 0;
