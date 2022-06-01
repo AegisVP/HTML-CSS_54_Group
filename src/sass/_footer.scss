@@ -1,115 +1,56 @@
 
 .footer{
-    position: relative;
-        padding-top: 32px;
-        padding-bottom: 20px;
-    
-    }
-    
-    .footer-social{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 32px;
-    }
-    .footer-social__item:not(:last-child){
-        margin-right: 16px;
-    }
-    .footer-social__link {
-        transition: transform 250ms linear;
-      }
-      
-    .footer-social__icon {
-        width: 16px;
-        height: 16px;
-      
-        .footer-social__link:hover &,
-        .footer-social__link:active &,
-        .footer-social__link:focus & {
-          transform: scale(1.5);
-        }
-    }
-    .footer-contacts{
-        display: flex;
-    
-        align-items: center;
-        justify-content: space-between;
-      
-    }
-    
-    .footer-contacts__link{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    
-    } 
-    
-    .footer-contacts__icon:not(:last-child){
-        margin-right: 4px;
-    }
-    .footer-contacts__text{
-        font-size: 16px;
-        line-height: 1.25;
-    
-        color:$color--main__like-black ;
-    
-    }
-    .footer-image{
-        margin: 0;
-        padding: 0;
-        width: 113px;
-        height: 99px;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        z-index: -1;
-       
-        background-image: 
-        url(../images/Wheat\ flour\ 1_mob.png);
-        background-repeat: no-repeat;
-     
-        @media ( min-device-pixel-ratio: 2),
-                (min-resolution:192dpi),
-                (min-resolution:2dppx){
-                background-image: 
-                 url(../images/Wheat\ flour\ 1@2x_mob.png) ;
-                 background-repeat: no-repeat;
-        }
-        
-        @media screen and (min-width:768px) and (max-width:1199px){
-        width: 207px;
-        height: 182px;
-        bottom: 0;
-        right: 0;
-        z-index: -1;
+position: relative;
+padding-top: 32px;
+padding-bottom: 20px;
+}
+.footer-social{
+display: flex;
+align-items: center;
+justify-content: center;
+margin-bottom: 32px;
 
-        background-image:
-               url(../images/Wheat-flour_tabl.png);
-               background-repeat: no-repeat;
-        @media ( min-device-pixel-ratio: 2),
-               (min-resolution:192dpi),
-               (min-resolution:2dppx){
-                background-image: 
-                url(../images/Wheat-flour@2x_tabl.png);
-                background-repeat: no-repeat;
-                }
+    @include tablet{
+    margin-bottom: 60px;   
+    }
+
+    @include desktop-bg{
+    margin-bottom: 80px;   
+    }
+}
+.footer-social__item:not(:last-child){
+margin-right: 16px;
+}
+.footer-social__link {
+transition: transform 250ms linear;
+}
+.footer-social__icon {
+width: 16px;
+height: 16px;
+      
+    .footer-social__link:hover &,
+    .footer-social__link:active &,
+    .footer-social__link:focus & {
+    transform: scale(1.5);
         }
+}
+.footer-contacts{
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.footer-contacts__link{
+display: flex;
+align-items: center;
+justify-content: center;
+} 
+.footer-contacts__icon:not(:last-child){
+margin-right: 4px;
+}
+.footer-contacts__text{
+font-size: 16px;
+line-height: 1.25;
     
-        @media screen and (min-width:1200px){
-        width: 355px;
-        height: 312px;
-        z-index: 0;
-        
-        @media ( min-device-pixel-ratio: 2),
-                (min-resolution:192dpi),
-                (min-resolution:2dppx){
-                background-image: 
-                url(../images/Wheat-flour@2x_desk.png);
-                background-repeat: no-repeat;
-                }
+color:$color--main__like-black ;
+}
     
-        background-image:
-            url(../images/Wheat-flour_desk.png);
-            background-repeat: no-repeat;
-        }
-     }
