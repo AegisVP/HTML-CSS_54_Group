@@ -1,4 +1,4 @@
-// @import '../sass/util/mybase';
+@import '../sass/util/mybase';
 
 .section-registration { 
 
@@ -20,8 +20,9 @@
     @media screen and (min-width: 768px) {
         position: absolute;
         z-index: 1;
-        width: 100%;
-        height: 100%;
+        top: 0%;
+        width: 196.13px;
+        height:200.69px;
       
     background-repeat: no-repeat;
     background-position: -4% -10%;
@@ -36,6 +37,7 @@
         }
 
     @media screen and (min-width: 1280px) {
+        top:40%;
         background-position:  2% 5%;
         background-size: 196.13px 200.69px;
 
