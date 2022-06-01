@@ -20,7 +20,7 @@
 }
 
 .program__inner {
-  max-width: 336px;
+  max-width: 440px;
 
   @include tablet {
     &:not(:last-of-type) {
@@ -129,6 +129,10 @@
     margin-top: -95px;
     margin-left: 150px;
     animation-direction: reverse;
+
+    @include mobile-bg {
+      margin-left: 250px;
+    }
 
     @include tablet {
       margin-top: -100px;
