@@ -1,15 +1,12 @@
-.contact__title {
-  text-align: center;
-  font-family: Caveat Brush;
+.contact__section {
+  padding-top: 32px;
 
-  @media screen and (max-width: 1279px) {
-    font-size: 24px;
-    line-height: 1.25;
+  @include tablet {
+    padding-top: 78px;
   }
 
-  @media screen and (min-width: 1280px) {
-    font-size: 36px;
-    line-height: 1.43;
+  @include desktop-bg {
+    padding-top: 160px;    
   }
 }
 
@@ -17,65 +14,101 @@
   text-align: center;
   line-height: 1.25;
   margin-top: 16px;
+  margin-bottom: 16px;
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     margin-top: 20px;
   }
 
-  @media screen and (min-width: 1280px) {
+  @include desktop-bg {
     font-size: 18px;
     line-height: 1.22;
   }
 }
 
-.contact__input,
-.contact__textarea {
-  display: block;
-  height: 22px;
-  border-top: 1px transparent;
-  border-right: 1px transparent;
-  border-bottom: 1px solid $color--main__dark-beige;
-  border-left: 1px transparent;
-  outline: none;
+.contact__group {
+  position: relative;
+  width: 100%;
+  
 
-  @media screen and (max-width: 767px) {
-    width: 100%;
-  }
-
-  @media screen and (min-width: 768px) {
+  @include tablet {
     width: 336px;
     margin-left: auto;
     margin-right: auto;
   }
 
-  @media screen and (min-width: 1280px) {
+  @include desktop-bg {
     width: 394px;
-  }
-
-  &::placeholder {
-    line-height: 1.25;
-    color: $color--text__light-beige;
-  }
-
-  &:out-of-range {
-    border-bottom: 2px solid red;
-  }
+  } 
 }
+
+.contact__group:not(:first-child) { 
+  margin-top: 20px;
+
+  @include tablet {
+    margin-top: 16px;
+  }  
+
+  @include desktop-bg {
+    margin-top: 15px;
+  } 
+}  
 
 .contact__input {
-  margin-top: 16px;
+  display: block;
+  width: 100%;
+  height: 22px;
+  border-top: 1px transparent;
+  border-right: 1px transparent;
+  border-bottom: 1px solid $color--main__dark-beige;
+  border-left: 1px transparent;
+  outline: none;    
+  color: $color--button__normal;
+  background-color: transparent;
+}    
 
-  @media screen and (max-width: 767px) {
-    margin-bottom: 20px;
-  }
+ 
 
-  @media screen and (min-width: 768px) {
-    margin-bottom: 16px;
-  }
+.contact__input:focus ~ .contact__label,
+.contact__input:not(:placeholder-shown) ~ .contact__label {
+  bottom: -12px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1;  
+  color: $color--main__dark-beige;  
 }
 
-.contact__textarea {
-  resize: none;
+.contact__border::after {
+  content: "";
+  background-color: $color--main__dark-beige;
+  position: absolute;
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  transition: width 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contact__input:focus ~ .contact__border::after {
+  width: 100%;
+}
+
+.contact__label {  
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+
+  line-height: 1.25;
+  color: $color--text__light-beige;  
+  
+  pointer-events: none;
+} 
+
+.contact__input:not(:placeholder-shown):required:invalid  ~ .contact__label {
+  color: $color--danger;
+}
+.contact__input:not(:placeholder-shown):required:invalid ~ .contact__border::after {
+  width: 100%;
+  background-color: $color--danger;
 }
 
 .contact__button {
