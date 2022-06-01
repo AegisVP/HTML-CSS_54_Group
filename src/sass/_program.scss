@@ -1,25 +1,49 @@
-.program .container {
+.program {
+  padding-top: 16px;
+
   @include tablet {
-    display: flex;
-    margin-top: 35px;
+    padding-top: 75px;
+  }
+
+  @include desktop-bg {
+    padding-top: 65px;
   }
 }
 
-.program__inner {
-  max-width: 336px;
+.program .container {
+  @include tablet {
+    display: flex;
+  }
+}
+
+.program__inner,
+.program__badges {
+  max-width: 440px;
 
   @include tablet {
     &:not(:last-of-type) {
       margin-right: 32px;
+      max-width: 336px;
     }
   }
 
   @include desktop-bg {
-    max-width: 392px;
-
     &:not(:last-of-type) {
       margin-right: 142px;
+      max-width: 392px;
     }
+
+    &:not(:first-of-type) {
+      max-width: 500px;
+    }
+  }
+}
+
+.program__badges {
+  @media screen and (max-width: 767.98px) {
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -110,6 +134,11 @@
   &:nth-child(2n) {
     margin-top: -95px;
     margin-left: 150px;
+    animation-direction: reverse;
+
+    // @media screen and (min-width: 350px) {
+    //   margin-left: auto;
+    // }
 
     @include tablet {
       margin-top: -100px;
@@ -149,6 +178,20 @@
 
   @include desktop-bg {
     height: 95px;
+  }
+}
+
+.features__item:hover::before {
+  animation: spin 1200ms ease-in-out both;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }
 

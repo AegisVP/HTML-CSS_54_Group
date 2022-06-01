@@ -69,8 +69,9 @@
 
  
 
-.contact__input:focus ~ .contact__label,
+// .contact__input:focus ~ .contact__label,
 .contact__input:not(:placeholder-shown) ~ .contact__label {
+  display: block;
   bottom: -12px;
   font-weight: 500;
   font-size: 12px;
@@ -92,6 +93,7 @@
 }
 
 .contact__label {  
+  display: none;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -102,6 +104,11 @@
   
   pointer-events: none;
 } 
+
+::placeholder {
+  line-height: 0.1;
+  color: $color--background__light;
+}
 
 .contact__input:not(:placeholder-shown):required:invalid  ~ .contact__label {
   color: $color--danger;
