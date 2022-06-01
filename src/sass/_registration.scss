@@ -45,13 +45,12 @@
     //     }
     // } 
 
-
-      
+        
     // background image donut
     @media screen and (min-width: 768px) {
     background-repeat: no-repeat;
-    background-position: top left;
-    background-size: auto;
+    background-position: 3% 3%;
+    background-size: 196.13px 200.69px;
     background-image: url('../images/donut_tabl.png');
    
     @media (min-device-pixel-ratio: 2),
@@ -62,10 +61,8 @@
         }
 
     @media screen and (min-width: 1280px) {
-        //  padding-top: 200px;
-        //  padding-bottom: 200px;
-        //  max-width: 1600px;
-        //  height: 600px;
+        background-position:  10% 50%;
+        background-size: 196.13px 200.69px;
 
          background-image: url('../images/donut_desk.png');
    

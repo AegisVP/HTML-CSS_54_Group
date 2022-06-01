@@ -1857,8 +1857,8 @@ p {
 @media screen and (min-width: 768px) {
   .section-registration__pic {
     background-repeat: no-repeat;
-    background-position: top left;
-    background-size: auto;
+    background-position: 3% 3%;
+    background-size: 196.13px 200.69px;
     background-image: url("../images/donut_tabl.png");
   }
 }
@@ -1871,6 +1871,8 @@ p {
 
 @media screen and (min-width: 1280px) {
   .section-registration__pic {
+    background-position: 10% 50%;
+    background-size: 196.13px 200.69px;
     background-image: url("../images/donut_desk.png");
   }
 }
