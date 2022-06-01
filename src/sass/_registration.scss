@@ -15,42 +15,6 @@
     }
 }    
 
-.registration__picture-top {
-    // background image donut    
-    @media screen and (min-width: 768px) {
-        position: absolute;
-        z-index: 1;
-        top: 0%;
-        width: 196.13px;
-        height:200.69px;
-      
-    background-repeat: no-repeat;
-    background-position: -4% -10%;
-    background-size: 196.13px 200.69px;
-    background-image: url('../images/donut_tabl.png');
-   
-    @media (min-device-pixel-ratio: 2),
-           (min-resolution: 192dpi),
-           (min-resolution: 2dppx) {
-            background-image: url('../images/donut@2x_tabl.png');
-           }
-        }
-
-    @media screen and (min-width: 1280px) {
-        top:40%;
-        background-position:  2% 5%;
-        background-size: 196.13px 200.69px;
-
-         background-image: url('../images/donut_desk.png');
-   
-        @media (min-device-pixel-ratio: 2),
-                (min-resolution: 192dpi),
-                (min-resolution: 2dppx) {
-                 background-image: url('../images/donut@2x_desk.png');
-                }
-         } 
-    }
-
    
 .registration { 
     width: 100%;
