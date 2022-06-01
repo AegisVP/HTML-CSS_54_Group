@@ -1,6 +1,7 @@
 .bg__part1 {
   background-repeat: no-repeat;
   background-position: 0 0;
+  overflow: hidden;
   background-image: url("../images/bg_vector_top_mobile.svg");
   background-size: 100% 474px;
 }
@@ -21,12 +22,13 @@
 
 .bg__part2 {
   background-repeat: no-repeat, no-repeat, no-repeat;
+  overflow: hidden;
 }
 
 @media (min-device-pixel-ratio: 1), (-webkit-min-device-pixel-ratio: 1), (min-resolution: 96dpi), (min-resolution: 1dppx) {
   .bg__part2 {
     background-image: url("../images/plate_mobile@1x.png"), url("../images/bg_vector_bottom_mobile.svg");
-    background-position: bottom right, top 7px center;
+    background-position: bottom right, top 34px center;
     background-size: auto, 100% 90%;
   }
 }
@@ -34,40 +36,98 @@
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .bg__part2 {
     background-image: url("../images/plate_mobile@2x.png"), url("../images/bg_vector_bottom_mobile.svg");
-    background-position: bottom right, top 7px center;
+    background-position: bottom right, top 34px center;
     background-size: 84px, 100% 90%;
   }
 }
 
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 1), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1), screen and (min-width: 768px) and (min-resolution: 96dpi), screen and (min-width: 768px) and (min-resolution: 1dppx) {
   .bg__part2 {
-    background-image: url("../images/confetti_tablet@1x.png"), url("../images/plate_tablet@1x.png"), url("../images/bg_vector_bottom_tablet.svg");
-    background-position: bottom 500px right, bottom right, top 7px center;
-    background-size: auto, auto, 100% 90%;
+    background-image: url("../images/plate_tablet@1x.png"), url("../images/bg_vector_bottom_tablet.svg");
+    background-position: bottom right, top 42px center;
+    background-size: auto, 100% 90%;
   }
 }
 
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .bg__part2 {
-    background-image: url("../images/confetti_tablet@2x.png"), url("../images/plate_tablet@2x.png"), url("../images/bg_vector_bottom_tablet.svg");
-    background-position: bottom 500px right, bottom right, top 7px center;
-    background-size: 287px, 184px, 100% 90%;
+    background-image: url("../images/plate_tablet@2x.png"), url("../images/bg_vector_bottom_tablet.svg");
+    background-position: bottom right, top 42px center;
+    background-size: 184px, 100% 90%;
   }
 }
 
 @media screen and (min-width: 1280px) and (min-device-pixel-ratio: 1), screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 1), screen and (min-width: 1280px) and (min-resolution: 96dpi), screen and (min-width: 1280px) and (min-resolution: 1dppx) {
   .bg__part2 {
-    background-image: url("../images/confetti_desktop@1x.png"), url("../images/plate_desktop@1x.png"), url("../images/bg_vector_bottom_desktop.svg");
-    background-position: bottom 320px right, bottom right, top 7px center;
-    background-size: auto, auto, 100% 100%;
+    background-image: url("../images/plate_desktop@1x.png"), url("../images/bg_vector_bottom_desktop.svg");
+    background-position: bottom right, top 42px center;
+    background-size: auto, 100% 100%;
   }
 }
 
 @media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
   .bg__part2 {
-    background-image: url("../images/confetti_desktop@2x.png"), url("../images/plate_desktop@2x.png"), url("../images/bg_vector_bottom_desktop.svg");
-    background-position: bottom 320px right, bottom right, top 7px center;
-    background-size: 566px, 302px, 100% 100%;
+    background-image: url("../images/plate_desktop@2x.png"), url("../images/bg_vector_bottom_desktop.svg");
+    background-position: bottom right, top 42px center;
+    background-size: 302px, 100% 100%;
+  }
+}
+
+.section-registration .registration-thumb {
+  position: relative;
+  z-index: 1;
+}
+
+.section-registration .container::after {
+  content: '';
+  display: none;
+  position: absolute;
+  z-index: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .section-registration .container::after {
+    display: block;
+    -webkit-transform: translate(167%, -62%);
+            transform: translate(167%, -62%);
+    height: 374px;
+    width: 270px;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 1), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1), screen and (min-width: 768px) and (min-resolution: 96dpi), screen and (min-width: 768px) and (min-resolution: 1dppx) {
+  .section-registration .container::after {
+    background-image: url("../images/confetti_tablet@1x.png");
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .section-registration .container::after {
+    background-image: url("../images/confetti_tablet@2x.png");
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .section-registration .container::after {
+    height: 543px;
+    width: 500px;
+    -webkit-transform: translate(125%, -50%);
+            transform: translate(125%, -50%);
+  }
+}
+
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 1), screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 1), screen and (min-width: 1280px) and (min-resolution: 96dpi), screen and (min-width: 1280px) and (min-resolution: 1dppx) {
+  .section-registration .container::after {
+    background-image: url("../images/confetti_desktop@1x.png");
+  }
+}
+
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
+  .section-registration .container::after {
+    background-image: url("../images/confetti_desktop@2x.png");
   }
 }
 
@@ -83,7 +143,6 @@
   font-size: 24px;
   font-weight: 400;
   font-style: normal;
-  font-weight: 400;
   line-height: 1.25;
   color: #2e2520;
 }
@@ -179,6 +238,7 @@
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -316,8 +376,6 @@ p {
   border: none;
   width: 40px;
   height: 21px;
-  -webkit-transform: translate(-5px, -4px);
-          transform: translate(-5px, -4px);
   cursor: pointer;
 }
 
@@ -692,8 +750,8 @@ p {
 
 @media screen and (min-width: 768px) {
   .close__btn {
-    top: 25px;
-    right: 67px;
+    top: 32px;
+    right: 32px;
   }
 }
 
@@ -912,31 +970,60 @@ p {
   }
 }
 
+.program {
+  padding-top: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .program {
+    padding-top: 75px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .program {
+    padding-top: 65px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .program .container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-top: 35px;
   }
 }
 
-.program__inner {
-  max-width: 336px;
+.program__inner,
+.program__badges {
+  max-width: 440px;
 }
 
 @media screen and (min-width: 768px) {
-  .program__inner:not(:last-of-type) {
+  .program__inner:not(:last-of-type),
+  .program__badges:not(:last-of-type) {
     margin-right: 32px;
+    max-width: 336px;
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .program__inner {
+  .program__inner:not(:last-of-type),
+  .program__badges:not(:last-of-type) {
+    margin-right: 142px;
     max-width: 392px;
   }
-  .program__inner:not(:last-of-type) {
-    margin-right: 142px;
+  .program__inner:not(:first-of-type),
+  .program__badges:not(:first-of-type) {
+    max-width: 500px;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .program__badges {
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -1050,6 +1137,7 @@ p {
 .features__item:nth-child(2n) {
   margin-top: -95px;
   margin-left: 150px;
+  animation-direction: reverse;
 }
 
 @media screen and (min-width: 768px) {
@@ -1098,6 +1186,33 @@ p {
 @media screen and (min-width: 1280px) {
   .features__item::before {
     height: 95px;
+  }
+}
+
+.features__item:hover::before {
+  -webkit-animation: spin 1200ms ease-in-out both;
+          animation: spin 1200ms ease-in-out both;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
@@ -1290,6 +1405,22 @@ p {
   .features__icon {
     width: 25px;
     height: 25px;
+  }
+}
+
+.reviews {
+  padding-top: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .reviews {
+    padding-top: 50px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .reviews {
+    padding-top: 77px;
   }
 }
 
@@ -1526,32 +1657,34 @@ p {
   .registration__picture-top {
     position: absolute;
     z-index: 1;
-    width: 100%;
-    height: 100%;
+    top: 0%;
+    width: 196.13px;
+    height: 200.69px;
     background-repeat: no-repeat;
     background-position: -4% -10%;
     background-size: 196.13px 200.69px;
-    background-image: url("./images/donut_tabl.png");
+    background-image: url("../images/donut_tabl.png");
   }
 }
 
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .registration__picture-top {
-    background-image: url("./images/donut@2x_tabl.png");
+    background-image: url("../images/donut@2x_tabl.png");
   }
 }
 
 @media screen and (min-width: 1280px) {
   .registration__picture-top {
+    top: 40%;
     background-position: 2% 5%;
     background-size: 196.13px 200.69px;
-    background-image: url("./images/donut_desk.png");
+    background-image: url("../images/donut_desk.png");
   }
 }
 
 @media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
   .registration__picture-top {
-    background-image: url("./images/donut@2x_desk.png");
+    background-image: url("../images/donut@2x_desk.png");
   }
 }
 
@@ -1932,8 +2065,8 @@ p {
   background-color: transparent;
 }
 
-.contact__input:focus ~ .contact__label,
 .contact__input:not(:placeholder-shown) ~ .contact__label {
+  display: block;
   bottom: -12px;
   font-weight: 500;
   font-size: 12px;
@@ -1957,6 +2090,7 @@ p {
 }
 
 .contact__label {
+  display: none;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -1964,6 +2098,26 @@ p {
   line-height: 1.25;
   color: rgba(171, 129, 108, 0.5);
   pointer-events: none;
+}
+
+::-webkit-input-placeholder {
+  line-height: 0.1;
+  color: #fffff9;
+}
+
+:-ms-input-placeholder {
+  line-height: 0.1;
+  color: #fffff9;
+}
+
+::-ms-input-placeholder {
+  line-height: 0.1;
+  color: #fffff9;
+}
+
+::placeholder {
+  line-height: 0.1;
+  color: #fffff9;
 }
 
 .contact__input:not(:placeholder-shown):required:invalid ~ .contact__label {
@@ -1980,6 +2134,94 @@ p {
   margin-top: 32px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.footer {
+  position: relative;
+  padding-top: 32px;
+  padding-bottom: 20px;
+}
+
+.footer-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-social {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .footer-social {
+    margin-bottom: 80px;
+  }
+}
+
+.footer-social__item:not(:last-child) {
+  margin-right: 16px;
+}
+
+.footer-social__link {
+  -webkit-transition: -webkit-transform 250ms linear;
+  transition: -webkit-transform 250ms linear;
+  transition: transform 250ms linear;
+  transition: transform 250ms linear, -webkit-transform 250ms linear;
+}
+
+.footer-social__icon {
+  width: 16px;
+  height: 16px;
+}
+
+.footer-social__link:hover .footer-social__icon,
+.footer-social__link:active .footer-social__icon,
+.footer-social__link:focus .footer-social__icon {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.footer-contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer-contacts__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer-contacts__icon:not(:last-child) {
+  margin-right: 4px;
+}
+
+.footer-contacts__text {
+  font-size: 16px;
+  line-height: 1.25;
+  color: #2e2520;
 }
 
 .backdrop {
