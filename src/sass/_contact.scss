@@ -103,6 +103,11 @@
   pointer-events: none;
 } 
 
+::placeholder {
+  line-height: 0.1;
+  color: $color--background__light;
+}
+
 .contact__input:not(:placeholder-shown):required:invalid  ~ .contact__label {
   color: $color--danger;
 }
