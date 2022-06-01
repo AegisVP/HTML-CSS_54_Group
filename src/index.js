@@ -21,11 +21,11 @@ function openModalForm(form) {
 }
 function openModal() {
   document.body.classList.add('modal-open');
-  modalRef.classList.remove('is-hidden');
+  modalRef.classList.add('is-open');
 }
 function closeModal() {
   document.body.classList.remove('modal-open');
-  modalRef.classList.add('is-hidden');
+  modalRef.classList.remove('is-open');
 }
 
 function openMenu() {
