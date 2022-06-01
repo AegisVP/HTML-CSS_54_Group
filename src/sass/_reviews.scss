@@ -1,4 +1,16 @@
-   // скопіював до класу .container
+.reviews {
+  margin-top: 20px;
+
+  @include tablet {
+    margin-top: 50px;
+  }
+
+  @include desktop-bg {
+    margin-top: 77px;
+  }
+}
+
+// скопіював до класу .container
 .reviews__container {
   margin-left: auto;
   margin-right: auto;
@@ -20,7 +32,7 @@
   }
 }
 
-   // скопіював до класу .section__title
+// скопіював до класу .section__title
 .reviews__title {
   margin: 0 0 20px 0;
 
