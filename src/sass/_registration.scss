@@ -1,4 +1,4 @@
-// @import '../sass/util/mybase';
+@import '../sass/util/mybase';
 
 .registration-pic { 
 
@@ -29,7 +29,68 @@
     //         right: -10%;   
     //     }
     // } 
+
+
+      
+    // background hero Overlay
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: $hero-background-gradient, url('../images/HeroMob.jpg');
+   
+    @media (min-device-pixel-ratio: 2),
+           (min-resolution: 192dpi),
+           (min-resolution: 2dppx) {
+            background-image: $hero-background-gradient, url('../images/HeroMob@2x.jpg');
+           }
+        
+    @media screen and (min-width: 768px) {
+        background-image: $hero-background-gradient, url('../images/HeroTabl.jpg');
+   
+    @media (min-device-pixel-ratio: 2),
+           (min-resolution: 192dpi),
+           (min-resolution: 2dppx) {
+            background-image: $hero-background-gradient, url('../images/HeroTabl@2x.jpg');
+           }
+        }    
+   
+    @media screen and (min-width: 1200px) {
+         padding-top: 200px;
+         padding-bottom: 200px;
+         max-width: 1600px;
+         height: 600px;
+
+         background-image: $hero-background-gradient, url('../images/HeroDesk.jpg');
+   
+        @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                 background-image: $hero-background-gradient, url('../images/HeroDesk@2x.jpg');
+                }
+         } 
+    }
+
+
+.hero__title { 
+    margin-top: 0px;
+    margin-bottom: 30px;
+
+    color: $secondary-text-color;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.6;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    @media screen and (min-width: 1200px) {
+          font-size: 44px;
+          line-height: 1.36;
+    }
 }
+
+
+
+
 
 .registration { 
     width: 100%;
@@ -250,7 +311,7 @@
     display: block;
 }
 
-.button {
+.button--margin {
     margin-top: 32px;
     margin-bottom: 0;
     margin-left: auto;
@@ -264,6 +325,44 @@
         margin: 0 0 0 32px;
     }
 }
+
+.registration-pic {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: $hero-background-gradient, url('../images/HeroMob.jpg');
+   
+    @media (min-device-pixel-ratio: 2),
+           (min-resolution: 192dpi),
+           (min-resolution: 2dppx) {
+            background-image: $hero-background-gradient, url('../images/HeroMob@2x.jpg');
+           }
+        
+    @media screen and (min-width: 768px) {
+        background-image: $hero-background-gradient, url('../images/HeroTabl.jpg');
+   
+    @media (min-device-pixel-ratio: 2),
+           (min-resolution: 192dpi),
+           (min-resolution: 2dppx) {
+            background-image: $hero-background-gradient, url('../images/HeroTabl@2x.jpg');
+           }
+        }    
+   
+    @media screen and (min-width: 1280px) {
+         padding-top: 200px;
+         padding-bottom: 200px;
+         max-width: 1600px;
+         height: 600px;
+
+         background-image: $hero-background-gradient, url('../images/HeroDesk.jpg');
+   
+        @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                 background-image: $hero-background-gradient, url('../images/HeroDesk@2x.jpg');
+                }
+         } 
+    }
 
 
 // .registration-field__input {
