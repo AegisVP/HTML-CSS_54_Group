@@ -2082,13 +2082,26 @@ p {
   }
 }
 
+.registration-field__input:not(:placeholder-shown):invalid {
+  border-bottom: 2px solid red;
+}
+
 .registration-field__input {
   width: 99%;
   height: 20px;
+  font-size: 16px;
+  line-height: 1.25;
   background-color: #fffff9;
   border: 1px solid transparent;
   border-bottom: 1px solid #ab816c;
   outline: none;
+  color: #674d40;
+}
+
+@media screen and (min-width: 1280px) {
+  .registration-field__input {
+    background-color: #fffff9;
+  }
 }
 
 .registration-field__input::-webkit-input-placeholder {

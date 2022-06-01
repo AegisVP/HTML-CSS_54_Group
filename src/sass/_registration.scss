@@ -16,36 +16,6 @@
 }    
 
 .section-registration__pic {
-
-    // @media screen and (max-width: 767px) {
-    //     position: absolute; 
-    //     width: 1px; 
-    //     height: 1px; 
-    //     margin: -1px; 
-    //     border: 0; 
-    //     padding: 0; 
-    //     white-space: nowrap; 
-    //     clip-path: inset(100%); 
-    //     clip: rect(0 0 0 0); 
-    //     overflow: hidden; 
-    // }
-       
-    // @media screen and (min-width: 768px) {
-    //     position: absolute;
-    //     z-index: -1; 
-   
-    //     &--top {
-    //        top: -20%;
-    //        left: 0;     
-    //     }
-
-    //     &--bottom {
-    //         bottom: -55%;
-    //         right: -10%;   
-    //     }
-    // } 
-
-        
     // background image donut
     @media screen and (min-width: 768px) {
     background-repeat: no-repeat;
@@ -246,17 +216,25 @@
   
 }
 
-// .registration-field__input:invalid {
-//     border-bottom: 2px solid red;
-// }
+.registration-field__input:not(:placeholder-shown):invalid {
+    border-bottom: 2px solid red;
+}
+
 .registration-field__input {
     width: 99%;
     height: 20px;
+    font-size: 16px;
+    line-height: 1.25; 
   
     background-color: $color--main__light-beige;
     border: 1px solid transparent;
     border-bottom: 1px solid $color--main__dark-beige;
-    outline: none;   
+    outline: none; 
+    color: $color--button__normal;  
+    
+      @include desktop-bg {
+        background-color: $color--background__light;
+      }  
 
     &::placeholder {
         color: $color--text__light-beige;
