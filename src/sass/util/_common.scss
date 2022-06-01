@@ -18,6 +18,7 @@
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
@@ -25,7 +26,9 @@ body {
   color: $color--text__default;
 
   background-color: $color--white;
-  @include desktop-bg {background-color: $color--background__light;}
+  @include desktop-bg {
+    background-color: $color--background__light;
+  }
 }
 
 body.menu-open {
