@@ -12,6 +12,7 @@ if (openMenuBtnRefList.length) for (const openMenuBtnRef of openMenuBtnRefList) 
 if (closeMenuBtnRefList.length) for (const closeMenuBtnRef of closeMenuBtnRefList) {closeMenuBtnRef.addEventListener('click', closeMenu);};
 if (openModalBtnList.length) for (const openModalBtn of openModalBtnList) {openModalBtn.addEventListener('click', openModal);};
 if (closeModalBtnList.length) for (const closeModalBtn of closeModalBtnList) {closeModalBtn.addEventListener('click', closeModal);};
+if (openModalFrmList.length) for (const openModalFrm of openModalFrmList) {openModalFrm.addEventListener('submit', openModalForm);};
 
 function openModalForm(form) {
   form?.preventDefault();
