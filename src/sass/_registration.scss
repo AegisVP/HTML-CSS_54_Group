@@ -1,35 +1,49 @@
 // @import '../sass/util/mybase';
 
-.registration-pic { 
+.section-registration { 
 
-    // @media screen and (max-width: 767px) {
-        position: absolute; 
-        width: 1px; 
-        height: 1px; 
-        margin: -1px; 
-        border: 0; 
-        padding: 0; 
-        white-space: nowrap; 
-        clip-path: inset(100%); 
-        clip: rect(0 0 0 0); 
-        overflow: hidden; 
-    
-       
-    // @media screen and (min-width: 768px) {
-    //     position: absolute;
-    //     z-index: -1; 
+    @media screen and (max-width: 767px) {
+        padding-top: 32px;
+    }
+
+    @media screen and (min-width: 768px) {
+        padding-top: 40px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        padding-top: 60px;
+    }
+}    
+
+.section-registration__pic {
+    // background image donut
+    @media screen and (min-width: 768px) {
+    background-repeat: no-repeat;
+    background-position: 3% 3%;
+    background-size: 196.13px 200.69px;
+    background-image: url('./images/donut_tabl.png');
    
-    //     &--top {
-    //        top: -20%;
-    //        left: 0;     
-    //     }
+    @media (min-device-pixel-ratio: 2),
+           (min-resolution: 192dpi),
+           (min-resolution: 2dppx) {
+            background-image: url('./images/donut@2x_tabl.png');
+           }
+        }
 
-    //     &--bottom {
-    //         bottom: -55%;
-    //         right: -10%;   
-    //     }
-    // } 
-}
+    @media screen and (min-width: 1280px) {
+        background-position:  10% 50%;
+        background-size: 196.13px 200.69px;
+
+         background-image: url('./images/donut_desk.png');
+   
+        @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                 background-image: url('./images/donut@2x_desk.png');
+                }
+         } 
+    }
+
 
 .registration { 
     width: 100%;
@@ -202,23 +216,25 @@
   
 }
 
-.registration-field__input:out-of-range {
+.registration-field__input:not(:placeholder-shown):invalid {
     border-bottom: 2px solid red;
 }
+
 .registration-field__input {
     width: 99%;
     height: 20px;
-
-    border-top: 1px transparent;
-    border-right: 1px transparent;  
-    border-bottom: 1px solid $color--main__dark-beige;
-    border-left: 1px transparent;
-    outline: none;
+    font-size: 16px;
+    line-height: 1.25; 
   
-    // background-color: $color--main__light-beige;
-    // border: 1px solid transparent;
-    // border-bottom: 1px solid $color--main__dark-beige;
-    // outline: none;   
+    background-color: $color--main__light-beige;
+    border: 1px solid transparent;
+    border-bottom: 1px solid $color--main__dark-beige;
+    outline: none; 
+    color: $color--button__normal;  
+    
+      @include desktop-bg {
+        background-color: $color--background__light;
+      }  
 
     &::placeholder {
         color: $color--text__light-beige;
@@ -250,7 +266,7 @@
     display: block;
 }
 
-.button {
+.button--margin {
     margin-top: 32px;
     margin-bottom: 0;
     margin-left: auto;
@@ -264,6 +280,7 @@
         margin: 0 0 0 32px;
     }
 }
+
 
 
 // .registration-field__input {
