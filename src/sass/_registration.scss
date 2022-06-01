@@ -1,95 +1,66 @@
 @import '../sass/util/mybase';
 
-.registration-pic { 
+// .registration-pic { 
 
-    // @media screen and (max-width: 767px) {
-        position: absolute; 
-        width: 1px; 
-        height: 1px; 
-        margin: -1px; 
-        border: 0; 
-        padding: 0; 
-        white-space: nowrap; 
-        clip-path: inset(100%); 
-        clip: rect(0 0 0 0); 
-        overflow: hidden; 
+//     // @media screen and (max-width: 767px) {
+//         position: absolute; 
+//         width: 1px; 
+//         height: 1px; 
+//         margin: -1px; 
+//         border: 0; 
+//         padding: 0; 
+//         white-space: nowrap; 
+//         clip-path: inset(100%); 
+//         clip: rect(0 0 0 0); 
+//         overflow: hidden; 
     
        
-    // @media screen and (min-width: 768px) {
-    //     position: absolute;
-    //     z-index: -1; 
+//     // @media screen and (min-width: 768px) {
+//     //     position: absolute;
+//     //     z-index: -1; 
    
-    //     &--top {
-    //        top: -20%;
-    //        left: 0;     
-    //     }
+//     //     &--top {
+//     //        top: -20%;
+//     //        left: 0;     
+//     //     }
 
-    //     &--bottom {
-    //         bottom: -55%;
-    //         right: -10%;   
-    //     }
-    // } 
+//     //     &--bottom {
+//     //         bottom: -55%;
+//     //         right: -10%;   
+//     //     }
+//     // } 
 
 
       
-    // background hero Overlay
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-image: $hero-background-gradient, url('../images/HeroMob.jpg');
+//     // background image donut
+//     @media screen and (min-width: 768px) {
+//     background-repeat: no-repeat;
+//     background-position: top left;
+//     background-size: auto;
+//     background-image: url('../images/donut_tabl.png');
    
-    @media (min-device-pixel-ratio: 2),
-           (min-resolution: 192dpi),
-           (min-resolution: 2dppx) {
-            background-image: $hero-background-gradient, url('../images/HeroMob@2x.jpg');
-           }
-        
-    @media screen and (min-width: 768px) {
-        background-image: $hero-background-gradient, url('../images/HeroTabl.jpg');
+//     @media (min-device-pixel-ratio: 2),
+//            (min-resolution: 192dpi),
+//            (min-resolution: 2dppx) {
+//             background-image: url('../images/donut@2x_tabl.png');
+//            }
+//         }
+
+//     @media screen and (min-width: 1280px) {
+//         //  padding-top: 200px;
+//         //  padding-bottom: 200px;
+//         //  max-width: 1600px;
+//         //  height: 600px;
+
+//          background-image: url('../images/donut_desk.png');
    
-    @media (min-device-pixel-ratio: 2),
-           (min-resolution: 192dpi),
-           (min-resolution: 2dppx) {
-            background-image: $hero-background-gradient, url('../images/HeroTabl@2x.jpg');
-           }
-        }    
-   
-    @media screen and (min-width: 1200px) {
-         padding-top: 200px;
-         padding-bottom: 200px;
-         max-width: 1600px;
-         height: 600px;
-
-         background-image: $hero-background-gradient, url('../images/HeroDesk.jpg');
-   
-        @media (min-device-pixel-ratio: 2),
-                (min-resolution: 192dpi),
-                (min-resolution: 2dppx) {
-                 background-image: $hero-background-gradient, url('../images/HeroDesk@2x.jpg');
-                }
-         } 
-    }
-
-
-.hero__title { 
-    margin-top: 0px;
-    margin-bottom: 30px;
-
-    color: $secondary-text-color;
-    font-weight: 900;
-    font-size: 26px;
-    line-height: 1.6;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-
-    @media screen and (min-width: 1200px) {
-          font-size: 44px;
-          line-height: 1.36;
-    }
-}
-
-
-
+//         @media (min-device-pixel-ratio: 2),
+//                 (min-resolution: 192dpi),
+//                 (min-resolution: 2dppx) {
+//                  background-image: url('../images/donut@2x_desk.png');
+//                 }
+//          } 
+//     }
 
 
 .registration { 
@@ -326,43 +297,6 @@
     }
 }
 
-.registration-pic {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-image: $hero-background-gradient, url('../images/HeroMob.jpg');
-   
-    @media (min-device-pixel-ratio: 2),
-           (min-resolution: 192dpi),
-           (min-resolution: 2dppx) {
-            background-image: $hero-background-gradient, url('../images/HeroMob@2x.jpg');
-           }
-        
-    @media screen and (min-width: 768px) {
-        background-image: $hero-background-gradient, url('../images/HeroTabl.jpg');
-   
-    @media (min-device-pixel-ratio: 2),
-           (min-resolution: 192dpi),
-           (min-resolution: 2dppx) {
-            background-image: $hero-background-gradient, url('../images/HeroTabl@2x.jpg');
-           }
-        }    
-   
-    @media screen and (min-width: 1280px) {
-         padding-top: 200px;
-         padding-bottom: 200px;
-         max-width: 1600px;
-         height: 600px;
-
-         background-image: $hero-background-gradient, url('../images/HeroDesk.jpg');
-   
-        @media (min-device-pixel-ratio: 2),
-                (min-resolution: 192dpi),
-                (min-resolution: 2dppx) {
-                 background-image: $hero-background-gradient, url('../images/HeroDesk@2x.jpg');
-                }
-         } 
-    }
 
 
 // .registration-field__input {
