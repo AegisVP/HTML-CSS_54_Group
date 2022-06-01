@@ -5,18 +5,63 @@
   margin-left: auto;
   margin-right: auto;
 
+  z-index: 1;
+
   @media screen and (min-width: 480px) {
     width: 480px;
   }
   @media screen and (min-width: 768px) {
     width: 768px;
-    padding: 35px 33px 0 33px;
+    padding: 35px 33px 69px 33px;
   }
 
   @media screen and (min-width: 1280px) {
     width: 1280px;
     padding: 35px 20px 0 20px;
+
   }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -51px;
+    left: -12px;
+    width: 130px;
+    height: 165px;
+    z-index: -1;
+
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    background-size: 130px 165px;
+    background-image: url('../images/header_donut_mobile@1x.png');
+    @include x2 {background-image: url('../images/header_donut_mobile@2x.png');}
+
+    @include tablet {
+      top: -35px;
+      left: 289px;
+      width: 378px;
+      height: 396px;
+      
+      background-size: 378px 396px;
+      background-image: url('../images/header_donut_tablet@1x.png');
+      @include x2 {background-image: url('../images/header_donut_tablet@2x.png');}
+    }
+
+    @include desktop-bg {
+      top: -170px;
+      left: 564px;
+      width: 793px;
+      height: 831px;
+
+      background-size: 793px 831px ;
+      background-image: url('../images/header_donut_desktop@1x.png');
+      @include x2 {background-image: url('../images/header_donut_desktop@2x.png');}
+    }
+  }
+
+
 }
 
 // burger
@@ -112,6 +157,8 @@
 }
 
 .navigation__link {
+    position: relative;
+      z-index: 1;
   font-size: 18px;
   line-height: 22px;
   transition: color 250ms linear;
@@ -128,9 +175,12 @@
 // title & subtitle
 
 .header__title {
+  position: relative;
+  z-index: 1;
+
   margin-bottom: 8px;
 
-  font-family: 'Caveat Brush';
+  font-family: $font--accent;
   text-align: center;
   font-weight: 400;
   font-size: 30px;
@@ -268,5 +318,24 @@
   .social__link:active &,
   .social__link:focus & {
     transform: scale(1.5);
+  }
+}
+
+// images
+
+.img__donuts {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+
+  @media screen and (min-width: 768px) {  
+    left: auto;
+    right: 102px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    right: 0;
   }
 }
