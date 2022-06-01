@@ -3,7 +3,7 @@
   pointer-events: none;
   visibility: hidden;
 
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -30,6 +30,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%) scale(1);
   width: calc(100% - 30px);
   height: 400px;
   background-color: $color--main__medium-beige;
@@ -50,7 +51,6 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms linear;
 
   &-icon {
