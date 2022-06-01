@@ -20,11 +20,12 @@ body {
   padding: 0;
 
   font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
   color: $color--text__default;
+
   background-color: $color--white;
-  @include desktop-bg {
-    background-color: $color--background__light;
-  }
+  @include desktop-bg {background-color: $color--background__light;}
 }
 
 body.menu-open {
@@ -44,4 +45,8 @@ ul {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+p {
+  margin: 0;
 }
