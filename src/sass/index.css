@@ -1836,6 +1836,51 @@ p {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .section-registration {
+    padding-top: 32px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section-registration {
+    padding-top: 40px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .section-registration {
+    padding-top: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section-registration__pic {
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: auto;
+    background-image: url("../images/donut_tabl.png");
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .section-registration__pic {
+    background-image: url("../images/donut@2x_tabl.png");
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .section-registration__pic {
+    background-image: url("../images/donut_desk.png");
+  }
+}
+
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
+  .section-registration__pic {
+    background-image: url("../images/donut@2x_desk.png");
+  }
+}
+
 .registration {
   width: 100%;
   height: 100%;
@@ -2035,17 +2080,12 @@ p {
   }
 }
 
-.registration-field__input:out-of-range {
-  border-bottom: 2px solid red;
-}
-
 .registration-field__input {
   width: 99%;
   height: 20px;
-  border-top: 1px transparent;
-  border-right: 1px transparent;
+  background-color: #fffff9;
+  border: 1px solid transparent;
   border-bottom: 1px solid #ab816c;
-  border-left: 1px transparent;
   outline: none;
 }
 
