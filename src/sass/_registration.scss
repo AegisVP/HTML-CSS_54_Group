@@ -1,4 +1,4 @@
-@import '../sass/util/mybase';
+// @import '../sass/util/mybase';
 
 .section-registration { 
 
@@ -21,12 +21,12 @@
     background-repeat: no-repeat;
     background-position: 3% 3%;
     background-size: 196.13px 200.69px;
-    background-image: url('../images/donut_tabl.png');
+    background-image: url('./images/donut_tabl.png');
    
     @media (min-device-pixel-ratio: 2),
            (min-resolution: 192dpi),
            (min-resolution: 2dppx) {
-            background-image: url('../images/donut@2x_tabl.png');
+            background-image: url('./images/donut@2x_tabl.png');
            }
         }
 
@@ -34,12 +34,12 @@
         background-position:  10% 50%;
         background-size: 196.13px 200.69px;
 
-         background-image: url('../images/donut_desk.png');
+         background-image: url('./images/donut_desk.png');
    
         @media (min-device-pixel-ratio: 2),
                 (min-resolution: 192dpi),
                 (min-resolution: 2dppx) {
-                 background-image: url('../images/donut@2x_desk.png');
+                 background-image: url('./images/donut@2x_desk.png');
                 }
          } 
     }
