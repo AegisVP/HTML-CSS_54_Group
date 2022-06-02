@@ -30,10 +30,12 @@
 }
 
 @media screen and (max-width: 767.98px) {
+  .about-us {
+    padding-top: 5px;
+  }
   .about-us__container {
     flex-direction: column;
     align-items: center;
-    padding-top: 5px;
   }
   .about-us__title {
     text-align: center;
@@ -89,9 +91,11 @@
 }
 
 @include tablet {
+  .about-us {
+    padding-top: 69px;
+  }
   .about-us__container {
     align-items: stretch;
-    padding-top: 69px;
   }
   .about-us__title {
     margin-bottom: 16px;
@@ -134,21 +138,21 @@
 @include desktop-bg {
   .about-us__container { 
     position: relative;
-    padding-top: 150px;
+    // padding-top: 150px;
     // padding-left: 126px;
     // padding-right: 126px;
   } 
+  .about-us {
+    padding-top: 154px;
+  }
+
   .about-us__text {
     max-width: 392px;
     font-weight: 400;
     font-size: 18px;
     line-height: 22px;
   }
-  // .about-us__title {
-  //   font-weight: 400;
-  //   font-size: 36px;
-  //   line-height: 65px;
-  // }
+
   .read-more {
     display: none;
   }
