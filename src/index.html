@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Add favicon for site, mobile app and MS tile -->
     <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
@@ -12,24 +13,23 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
+    <!-- Add fonts from Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Montserrat:wght@400;500&display=swap"
-    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Montserrat:wght@400;500&display=swap" />
 
     <title>Donut Masterclass</title>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
+
+    <!-- Add stylesheets -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./sass/index.scss" />
   </head>
+
   <body>
     <div class="bg__part1">
       <include src="./partials/menu.html"></include>
       <include src="./partials/header.html"></include>
+      <include src="./partials/hero.html"></include>
       <include src="./partials/aboutus.html"></include>
       <include src="./partials/program.html"></include>
     </div>
@@ -41,8 +41,12 @@
       <include src="./partials/modal.html"></include>
     </div>
 
+    <!-- Swiper library -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./swiper.js"></script>
+
+    <!-- Site library -->
+    <script src="./program.js" type="module"></script>
     <script src="./index.js" type="module"></script>
   </body>
 </html>
