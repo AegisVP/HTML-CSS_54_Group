@@ -71,6 +71,11 @@
   @include desktop-bg {
     margin-bottom: 16px;
   }
+
+  &::before {
+    content: '>';
+    margin-right: 2px;
+  }
 }
 
 .program__text {
