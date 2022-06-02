@@ -78,14 +78,14 @@
     }
 }
 
-.registration-info__item:not(:first-child) {
+.registration-info__details:not(:first-child) {
 
     @media screen and (max-width: 767.98px) {
         margin-bottom: 20px;
     }
 }
 
-.registration-info__item:nth-child(2n) {
+.registration-info__details:nth-child(2n) {
 
     @include tablet {
         margin-bottom: 32px;
@@ -190,7 +190,7 @@
 }
 
 .registration-field__input:not(:placeholder-shown):invalid {
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid $color--danger;
 }
 
 .registration-field__input {
