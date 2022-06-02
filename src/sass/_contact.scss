@@ -10,20 +10,23 @@
   }
 }
 
-.contact__text {
-  text-align: center;
-  line-height: 1.25;
-  margin-top: 16px;
+.section__title--contact {
   margin-bottom: 16px;
 
   @include tablet {
-    margin-top: 20px;
-  }
+    margin-bottom: 20px;
+  }  
+}
+
+.contact__text {
+  text-align: center;
+  line-height: 1.25;  
+  margin-bottom: 16px;
 
   @include desktop-bg {
     font-size: 18px;
     line-height: 1.22;
-  }
+  }  
 }
 
 .contact__group {
@@ -55,6 +58,8 @@
 }  
 
 .contact__input {
+  position: relative;
+  
   display: block;
   width: 100%;
   height: 22px;
@@ -69,7 +74,7 @@
 
  
 
-// .contact__input:focus ~ .contact__label,
+.contact__input:focus ~ .contact__label,
 .contact__input:not(:placeholder-shown) ~ .contact__label {
   display: block;
   bottom: -12px;
