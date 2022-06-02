@@ -2,7 +2,7 @@
 
 .section-registration { 
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 767.98px) {
         padding-top: 32px;
     }
 
@@ -21,7 +21,7 @@
     height: 100%;
     margin: 0;
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 767.98px) {
     padding-top: 32px;
     padding-bottom: 32px;
 
@@ -68,26 +68,26 @@
 
 .registration-info {
 
-    @media screen and (min-width: 768px) and (max-width: 1279px) {
+    @media screen and (min-width: 768px) and (max-width: 1279.98px) {
         width: 90px;
         margin-right: 32px;
     }
 
-    @media screen and (min-width: 1280px) {
+    @include desktop-bg {
         margin-right: 32px;
     }
 }
 
 .registration-info__item:not(:first-child) {
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 767.98px) {
         margin-bottom: 20px;
     }
 }
 
 .registration-info__item:nth-child(2n) {
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
         margin-bottom: 32px;
     }
 }
@@ -112,7 +112,7 @@
  
 .registration-form {
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 767.98px) {
         margin-left: 8px;
         margin-right: 8px;
     }
@@ -154,7 +154,7 @@
         font-size: 16px;
         line-height: 1.25;
 
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: 767.98px) {
             text-align: center;
             margin-top: 0;
             margin-bottom: 20px;

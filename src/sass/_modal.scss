@@ -30,19 +30,16 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  width: calc(100% - 30px);
+  max-width: calc(100% - 30px);
   height: 400px;
+  padding-left: 20px;
+  padding-right: 20px;
+
   background-color: $color--main__medium-beige;
+  transform: translate(-50%, -50%) scale(1);
   cursor: default;
   
-  @media screen and (min-width: 480px) and (max-width: 1199px) {
-    max-width: 450px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    width: 528px;
-  }
+  transition: transform 250ms linear;
 
   background: #ffffff;
   box-shadow: 
@@ -51,40 +48,32 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  transition: transform 250ms linear;
+  @include tablet {
+    max-width: 450px;
+  }
 
-  &-icon {
+  @include desktop-bg {
+    width: 528px;
+  }
+
+  &__icon {
     width: 18px;
     height: 18px;
     fill: var(--text-color);
   }
-
-  &__button {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 30px;
-    height: 30px;
-    background: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
-    cursor: pointer;
-  }
 }
+
 .modal__text {
   margin-top: 135px;
-  font-family: 'Caveat Brush';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 65px;
+  font-family: $font--accent;
+  font-size: 24px;
+  line-height: 1.8;
 
   text-align: center;
 
   color: #2e2520;
+
+  @include tablet {
+      font-size: 36px;
+  }
 }
