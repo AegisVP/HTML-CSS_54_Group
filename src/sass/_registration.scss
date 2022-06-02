@@ -1,5 +1,3 @@
-// @import '../sass/util/mybase';
-
 .section-registration { 
 
     @media screen and (max-width: 767.98px) {
@@ -78,20 +76,6 @@
     }
 }
 
-.registration-info__details:not(:first-child) {
-
-    @media screen and (max-width: 767.98px) {
-        margin-bottom: 20px;
-    }
-}
-
-.registration-info__details:nth-child(2n) {
-
-    @include tablet {
-        margin-bottom: 32px;
-    }
-}
-
 .registration-info__details {
     margin: 0;
     
@@ -107,6 +91,20 @@
 
     @media screen and (min-width: 1280px) {
         font-size: 20px;
+    }
+}
+
+.registration-info__details:not(:first-child) {
+
+    @media screen and (max-width: 767.98px) {
+        margin-bottom: 20px;
+    }
+}
+
+.registration-info__details:nth-child(2n) {
+
+    @include tablet {
+        margin-bottom: 32px;
     }
 }
  
@@ -262,11 +260,10 @@
     } 
   }
 
-//   .contact__input:focus ~ .contact__label,
+
 .registration-field__input:not(:placeholder-shown) ~ .registration-field__label {
     display: block;
     bottom: -12px;
-    // font-weight: 500;
     font-size: 16px;
     line-height: 1.25;  
     color: $color--main__dark-beige; 
