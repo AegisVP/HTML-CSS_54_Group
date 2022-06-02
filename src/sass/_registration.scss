@@ -189,15 +189,12 @@
   
 }
 
-// .registration-field__input:not(:placeholder-shown):invalid {
-//     border-bottom: 2px solid $color--danger;
-// }
-
 .registration-field__input {
     width: 99%;
     height: 20px;
     font-size: 16px;
-    line-height: 1.25; 
+    line-height: 1.25;
+    font-family: 'Montserrat', sans-serif; 
   
     background-color: $color--main__light-beige;
     border: 1px solid transparent;
@@ -221,22 +218,6 @@
     }
 }
 
-.registration-field__lable:not(:last-child) {
-    margin-bottom: 20px;
-
-    @media screen and (min-width: 768px) {
-        margin-bottom: 16px;
-    }
-
-    @media screen and (min-width: 1280px) {
-        margin-bottom: 15px;
-    }
-}
-
-// .registration-field__lable {
-//     display: block;
-// }
-
 .button--margin {
     margin-top: 32px;
     margin-bottom: 0;
@@ -259,7 +240,7 @@
     
   
     @include tablet {
-      width: 237px;
+      width: 235px;
       margin-left: auto;
       margin-right: auto;
     }
@@ -269,19 +250,19 @@
     } 
   }
 
-//   .registration-field__group:not(:first-child) { 
-//     margin-top: 20px;
+  .registration-field__group:not(:first-child) { 
+    margin-top: 20px;
   
-//     @include tablet {
-//       margin-top: 16px;
-//     }  
+    @include tablet {
+      margin-top: 16px;
+    }  
   
-//     @include desktop-bg {
-//       margin-top: 15px;
-//     } 
-//   }
+    @include desktop-bg {
+      margin-top: 15px;
+    } 
+  }
 
-  // .contact__input:focus ~ .contact__label,
+//   .contact__input:focus ~ .contact__label,
 .registration-field__input:not(:placeholder-shown) ~ .registration-field__label {
     display: block;
     bottom: -12px;
@@ -297,7 +278,7 @@
     position: absolute;
     height: 2px;
     width: 0;
-    bottom: 0;
+    top: 100%;
     transition: width 200ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .registration-field__input:focus ~ .registration-field__border::after {
@@ -308,9 +289,8 @@
     display: none;
     position: absolute;
     left: 0;
-    top: 0;
-    display: block;
-  
+    top: 100%;
+   
     line-height: 1.25;
     color: $color--text__light-beige;  
     
