@@ -1,6 +1,7 @@
 .bg__part1 {
   background-repeat: no-repeat;
   background-position: 0 0;
+  overflow: hidden;
 
   background-image: url('../images/bg_vector_top_mobile.svg');
   background-size: 100% 474px;
@@ -32,6 +33,7 @@
 
 .bg__part2 {
   background-repeat: no-repeat, no-repeat, no-repeat;
+  overflow: hidden;
 
   @include x1 {
     background-image: url('../images/plate_mobile@1x.png'),
@@ -49,37 +51,78 @@
 
   @include tablet {
     @include x1 {
-      background-image: url('../images/confetti_tablet@1x.png'),
-        url('../images/plate_tablet@1x.png'),
+      background-image: url('../images/plate_tablet@1x.png'),
         url('../images/bg_vector_bottom_tablet.svg');
-      background-position: bottom 500px right, bottom right, top 42px center;
-      background-size: auto, auto, 100% 90%;
+      background-position: bottom right, top 42px center;
+      background-size: auto, 100% 90%;
     }
 
     @include x2 {
-      background-image: url('../images/confetti_tablet@2x.png'),
-        url('../images/plate_tablet@2x.png'),
+      background-image: url('../images/plate_tablet@2x.png'),
         url('../images/bg_vector_bottom_tablet.svg');
-      background-position: bottom 500px right, bottom right, top 42px center;
-      background-size: 287px, 184px, 100% 90%;
+      background-position: bottom right, top 42px center;
+      background-size: 184px, 100% 90%;
     }
   }
 
   @include desktop-bg {
     @include x1 {
-      background-image: url('../images/confetti_desktop@1x.png'),
-        url('../images/plate_desktop@1x.png'),
+      background-image: url('../images/plate_desktop@1x.png'),
         url('../images/bg_vector_bottom_desktop.svg');
-      background-position: bottom 320px right, bottom right, top 42px center;
-      background-size: auto, auto, 100% 100%;
+      background-position: bottom right, top 42px center;
+      background-size: auto, 100% 100%;
     }
 
     @include x2 {
-      background-image: url('../images/confetti_desktop@2x.png'),
-        url('../images/plate_desktop@2x.png'),
+      background-image: url('../images/plate_desktop@2x.png'),
         url('../images/bg_vector_bottom_desktop.svg');
-      background-position: bottom 320px right, bottom right, top 42px center;
-      background-size: 566px, 302px, 100% 100%;
+      background-position: bottom right, top 42px center;
+      background-size: 302px, 100% 100%;
+    }
+  }
+}
+
+.section-registration .registration-thumb {
+  position: relative;
+  z-index: 1;
+}
+
+.section-registration .container::after {
+  content: '';
+  display: none;
+  position: absolute;
+
+  z-index: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+
+  @include tablet {
+    display: block;
+    transform: translate(-35px, -345px);
+    height: 492px;
+    width: 768px;
+
+    @include x1 {
+      background-image: url('../images/reg-bak-t@1x.png');
+    }
+
+    @include x2 {
+      background-image: url('../images/reg-bak-t@2x.png');
+    }
+  }
+
+  @include desktop-bg {
+    height: 621px;
+    width: 1203px;
+    transform: translate(-35px, -335px);
+
+    @include x1 {
+      background-image: url('../images/reg-bak-d@1x.png');
+    }
+
+    @include x2 {
+      background-image: url('../images/reg-bak-d@2x.png');
     }
   }
 }

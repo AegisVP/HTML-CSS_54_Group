@@ -40,11 +40,11 @@
 
     @include tablet {
       top: -35px;
-      left: 289px;
-      width: 378px;
+      left: 280px;
+      width: 397px;
       height: 396px;
       
-      background-size: 378px 396px;
+      background-size: 400px 391px;
       background-image: url('../images/header_donut_tablet@1x.png');
       @include x2 {background-image: url('../images/header_donut_tablet@2x.png');}
     }
@@ -79,7 +79,6 @@
   border: none;
   width: 40px;
   height: 21px;
-  transform: translate(-5px, -4px);
   cursor: pointer;
 
   @media screen and (min-width: 768px) {
@@ -119,7 +118,7 @@
 }
 
 .logo__link {
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 767.98px) {
     margin-left: auto;
     margin-right: auto;
   }

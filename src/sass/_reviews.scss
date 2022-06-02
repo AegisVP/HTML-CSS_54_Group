@@ -1,34 +1,12 @@
 .reviews {
-  padding-top: 20px;
+  padding-top: 15px;
 
   @include tablet {
-    padding-top: 50px;
+    padding-top: 45px;
   }
 
   @include desktop-bg {
-    padding-top: 77px;
-  }
-}
-
-// скопіював до класу .container
-.reviews__container {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 24px;
-  padding-right: 24px;
-
-  @include tablet {
-    min-width: 768px;
-    width: 768px;
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-
-  @include desktop-bg {
-    max-width: 1280px;
-    width: 1280px;
-    padding-left: 126px;
-    padding-right: 126px;
+    padding-top: 72px;
   }
 }
 
@@ -36,17 +14,8 @@
 .reviews__title {
   margin: 0 0 20px 0;
 
-  text-align: center;
-  font-family: 'Caveat Brush';
-  font-style: normal;
-  line-height: 1.25;
-  color: $color--main__like-black;
-
   @include desktop-bg {
     margin: 0 0 36px 0;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 1.8;
   }
 }
 
