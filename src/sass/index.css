@@ -1834,10 +1834,6 @@ p {
   }
 }
 
-.registration-field__input:not(:placeholder-shown):invalid {
-  border-bottom: 2px solid #ff0000;
-}
-
 .registration-field__input {
   width: 99%;
   height: 20px;
@@ -1903,10 +1899,6 @@ p {
   }
 }
 
-.registration-field__lable {
-  display: block;
-}
-
 .button--margin {
   margin-top: 32px;
   margin-bottom: 0;
@@ -1924,6 +1916,88 @@ p {
   .button--margin {
     margin: 0 0 0 32px;
   }
+}
+
+.registration-field__group {
+  position: relative;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .registration-field__group {
+    width: 237px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .registration-field__group {
+    width: 238px;
+  }
+}
+
+.registration-field__input:not(:placeholder-shown) ~ .registration-field__label {
+  display: block;
+  bottom: -12px;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #ab816c;
+}
+
+.registration-field__border::after {
+  content: "";
+  background-color: #ab816c;
+  position: absolute;
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  -webkit-transition: width 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: width 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.registration-field__input:focus ~ .registration-field__border::after {
+  width: 100%;
+}
+
+.registration-field__label {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  line-height: 1.25;
+  color: rgba(171, 129, 108, 0.5);
+  pointer-events: none;
+}
+
+::-webkit-input-placeholder {
+  line-height: 0.1;
+  color: #fffff9;
+}
+
+:-ms-input-placeholder {
+  line-height: 0.1;
+  color: #fffff9;
+}
+
+::-ms-input-placeholder {
+  line-height: 0.1;
+  color: #fffff9;
+}
+
+::placeholder {
+  line-height: 0.1;
+  color: #fffff9;
+}
+
+.registration-field__input:not(:placeholder-shown):required:invalid ~ .registration-field__label {
+  color: #ff0000;
+}
+
+.registration-field__input:not(:placeholder-shown):required:invalid ~ .registration-field__border::after {
+  width: 100%;
+  background-color: #ff0000;
 }
 
 .contact__section {

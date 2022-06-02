@@ -1,3 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="./images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Montserrat:wght@400;500&display=swap"
+    />
+
+    <title>Donut Masterclass</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="../../src/sass/index.css" />
+  </head>
+  <body>
 <section class="section section-registration" id="registration">
   <div class="container">
     <div class="registration">
@@ -8,17 +37,26 @@
           <p class="registration-info__details">New York</p>                  
           <p class="registration-info__details">$ 699</p>        
       </div>
-      <form class="registration-form">
+      <form action="#" class="registration-form">
         <p class="registration-form__text">Apply your personal info <br>
         for registration </p>
         <div class="registration-field">
           <div class="registration-field__box">
+            <div class="registration-field__group">
             <input class="name registration-field__input" name="name" id="name" placeholder="Your name" pattern="^[a-zA-Z]+\s[a-zA-Z]+$" title="Username must be written in letters." required/>
-            <label for="name" class="registration-field__lable"></label>
+            <span class="registration-field__border"></span>
+            <label for="name" class="registration-field__lable">Your name</label>
+          </div>
+            <div class="registration-field__group">
             <input class="phone registration-field__input" name="phone" id="phone" placeholder="Phone number" pattern="\+?[0-9\s\-\(\)]+" title="Enter numbers, please." required/>
-            <label for="phone" class="registration-field__lable"></label>
+            <span class="registration-field__border"></span>
+            <label for="phone" class="registration-field__lable">Phone number</label>
+          </div>
+            <div class="registration-field__group">
             <input class="email registration-field__input" name="email" id="email" placeholder="E-mail" pattern="@" title="Looks like exemple@mail.com" required/>
-            <label for="email" class="registration-field__lable"></label>
+            <span class="registration-field__border"></span>
+            <label for="email" class="registration-field__lable">E-mail</label>
+          </div>
           </div>
           <button type="submit" class="button button--margin">Register</button>
         </div>
@@ -27,3 +65,8 @@
     </div>
   </div>
 </section>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="./swiper.js"></script>
+<script src="./index.js" type="module"></script>
+</body>
+</html>
