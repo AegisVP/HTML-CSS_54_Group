@@ -132,12 +132,12 @@
 }
 
 @include desktop-bg {
-  .about-us__container {
-    // position: relative;
+  .about-us__container { 
+    position: relative;
     padding-top: 150px;
     // padding-left: 126px;
     // padding-right: 126px;
-  }
+  } 
   .about-us__text {
     max-width: 392px;
     font-weight: 400;
