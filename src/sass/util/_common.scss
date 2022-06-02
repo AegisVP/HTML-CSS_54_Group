@@ -30,7 +30,6 @@ body {
     background-color: $color--background__light;
   }
 
-body {
   &.menu-open { 
     @media screen and (max-width: 1279.98px) {overflow: hidden;}
   }
