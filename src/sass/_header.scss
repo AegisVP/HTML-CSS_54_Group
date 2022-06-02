@@ -33,10 +33,15 @@
 
   }
 
-  &::before {
+  
+    // overflow: hidden;
+    // overflow-y:unset;
+
+  &::after {
     content: "";
     display: block;
     position: absolute;
+    // overflow-x: hidden;
     top: -51px;
     left: -12px;
     width: 130px;
