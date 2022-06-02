@@ -25,7 +25,9 @@ body {
   color: $color--text__default;
 
   background-color: $color--white;
-  @include desktop-bg {background-color: $color--background__light;}
+  @include desktop-bg {
+    background-color: $color--background__light;
+  }
 }
 
 body.menu-open {
@@ -47,6 +49,11 @@ a {
   color: inherit;
 }
 
-p {
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
   margin: 0;
 }

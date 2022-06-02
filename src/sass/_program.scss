@@ -95,8 +95,9 @@
   line-height: 1.28;
   text-align: center;
   color: $color--main__dark-beige;
-  background-color: $color--white;
+  background-color: transparent;
   border: none;
+  padding: 0;
   margin-top: 16px;
 
   @media screen and (max-width: 767px) {
@@ -111,7 +112,8 @@
 .features {
   text-align: center;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  // flex-direction: column;
 }
 
 .features__item {
