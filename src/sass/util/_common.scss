@@ -31,9 +31,7 @@ body {
 }
 
 body.menu-open {
-  @media screen and (max-width: 1279.98px) {
-    overflow: hidden;
-  }
+  @media screen and (max-width: 1279.98px) {overflow: hidden;}
 }
 
 // reset styles
