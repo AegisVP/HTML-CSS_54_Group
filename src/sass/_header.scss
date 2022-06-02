@@ -1,3 +1,15 @@
+.header {
+  margin-bottom: 31px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 16px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 42px;
+  }
+}
+
 .header__container {
   position: relative;
   min-width: 320px;
@@ -12,12 +24,12 @@
   }
   @media screen and (min-width: 768px) {
     width: 768px;
-    padding: 35px 33px 69px 33px;
+    padding: 36px 33px 0 36px;
   }
 
   @media screen and (min-width: 1280px) {
     width: 1280px;
-    padding: 35px 20px 0 20px;
+    padding: 38px 20px 0 20px;
 
   }
 
@@ -105,17 +117,9 @@
 // navigation
 .navigation {
   display: flex;
-  align-items: center;
-  margin-bottom: 31px;
-
-  @media screen and (min-width: 768px) {
-    margin-bottom: 16px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    margin-bottom: 42px;
-  }
+  // align-items: center;
 }
+
 
 .logo__link {
   @media screen and (max-width: 767.98px) {
@@ -156,11 +160,14 @@
 }
 
 .navigation__link {
-    position: relative;
-      z-index: 1;
+  display: block;
+  position: relative;
+  z-index: 1;
   font-size: 18px;
   line-height: 22px;
   transition: color 250ms linear;
+  padding-top: 17px;
+  padding-bottom: 41px;
 
   &:hover,
   &:focus {
@@ -173,49 +180,7 @@
 
 // title & subtitle
 
-.header__title {
-  position: relative;
-  z-index: 1;
 
-  margin-bottom: 8px;
-
-  font-family: $font--accent;
-  text-align: center;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 38px;
-
-  @media screen and (min-width: 768px) {
-    text-align: start;
-  }
-
-  @media screen and (min-width: 1280px) {
-    margin-bottom: 16px;
-
-    font-size: 64px;
-    line-height: 65px;
-  }
-}
-
-.header__subtitle {
-  margin-bottom: 32px;
-
-  text-align: center;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
-
-  @media screen and (min-width: 768px) {
-    margin-bottom: 28px;
-    text-align: start;
-  }
-
-  @media screen and (min-width: 1280px) {
-    margin-bottom: 32px;
-    font-size: 24px;
-    line-height: 29px;
-  }
-}
 
 .register__link {
   font-family: 'Caveat Brush';
@@ -286,39 +251,7 @@
   }
 }
 
-// social
 
-.social__list {
-  display: flex;
-  justify-content: center;
-
-  @media screen and (min-width: 768px) {
-    justify-content: left;
-  }
-}
-
-.social__item {
-  margin-right: 16px;
-
-  &:last-child {
-    margin-right: 0;
-  }
-}
-
-.social__link {
-  transition: transform 250ms linear;
-}
-
-.social__icon {
-  width: 16px;
-  height: 16px;
-
-  .social__link:hover &,
-  .social__link:active &,
-  .social__link:focus & {
-    transform: scale(1.5);
-  }
-}
 
 // images
 
