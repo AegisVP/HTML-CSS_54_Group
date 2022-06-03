@@ -56,40 +56,28 @@ body {
 
     @include x1 {
       background-image: 
+        url('../images/plate_desktop@1x.png')
         url('../images/bg/bg1-d@1x-min.png'),
         url('../images/bg/bg2-d@1x-min.png');
     }
     
     @include x2 {
       background-image: 
+        url('../images/plate_desktop@2x.png')
         url('../images/bg/bg1-d@2x-min.png'),
         url('../images/bg/bg2-d@2x-min.png');
     }
 
     background-size: 
+      302px 175px,
       100% 1036px,
       100% 2073px;
     
     background-position:
+      right bottom,
       center top,
       center bottom -212px;
   }
-
-
-      //   url('../images/plate_desktop@1x.png'),
-      //   url('../images/plate_desktop@2x.png'),
-      // 302px 185px,
-      // right bottom,
-
-  // @include tablet {
-  //   background-image: url('../images/bg_vector_top_tablet.svg');
-  //   background-size: 100% 650px;
-  // }
-
-  // @include desktop-bg {
-  //   background-image: url('../images/bg_vector_top_desktop.svg');
-  //   background-size: 100% 1036px;
-  // }
 }
 
 // .bg__part1 {
