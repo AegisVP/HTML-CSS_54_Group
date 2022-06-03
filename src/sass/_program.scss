@@ -189,11 +189,19 @@
 
 @keyframes spin {
   0% {
-    transform: rotate(0deg);
+    transform: translateX(0) rotate(90deg);
+  }
+
+  50% {
+    transform: translateX(50px) rotate(180deg);
+  }
+
+  75% {
+    transform: translateX(-50px) rotate(270deg);
   }
 
   100% {
-    transform: rotate(360deg);
+    transform: translateX(0) rotate(360deg);
   }
 }
 
