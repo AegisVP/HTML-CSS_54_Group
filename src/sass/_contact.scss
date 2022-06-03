@@ -15,7 +15,11 @@
 
   @include tablet {
     margin-bottom: 20px;
-  }  
+  } 
+  
+  @include desktop-bg {    
+    line-height: 1.25;
+  }
 }
 
 .contact__text {
