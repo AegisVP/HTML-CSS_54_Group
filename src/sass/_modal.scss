@@ -2,12 +2,15 @@
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
+  overflow: hidden;
 
   position: fixed;
   top: 0;
+  bottom: 0;
   left: 0;
+  right: 0;
   width: 100%;
-  height: 100vh;
+  height: 105vh;
   z-index: 10;
 
   background-color: $color--main__medium-beige;
@@ -26,14 +29,16 @@
 }
 
 .modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   opacity: 1;
   position: absolute;
   top: 50%;
   left: 50%;
   max-width: calc(100% - 30px);
   height: 400px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 20px;
 
   background-color: $color--main__medium-beige;
   transform: translate(-50%, -50%) scale(1);
@@ -64,7 +69,7 @@
 }
 
 .modal__text {
-  margin-top: 135px;
+  margin: 0;
   font-family: $font--accent;
   font-size: 24px;
   line-height: 1.8;
