@@ -205,32 +205,9 @@
   border-radius: 25px;
   border: none;
 
-  &:hover,
-  &:focus {
-    padding: 10px 44px 0 44px;
-    background-color: $color--button__hover;
-  }
-
-  &:active {
-    padding: 10px 44px 0 44px;
-    background-color: $color--program-icon__fill;
-  }
-
   @media screen and (min-width: 768px) {
     margin: 0;
     margin-bottom: 20px;
-
-    &:hover,
-    &:focus {
-      padding-top: 8px;
-      transform: translateY(-13px);
-    }
-
-    &:active {
-      padding-top: 8px;
-      transform: translateY(-13px);
-      background-color: $color--program-icon__fill;
-    }
   }
 
   @media screen and (min-width: 1280px) {
@@ -241,18 +218,6 @@
 
     font-size: 24px;
     line-height: 30px;
-
-    &:hover,
-    &:focus {
-      padding-top: 8px;
-      transform: translateY(-2px);
-    }
-
-    &:active {
-      padding-top: 8px;
-      transform: translateY(-2px);
-      background-color: $color--program-icon__fill;
-    }
   }
 }
 

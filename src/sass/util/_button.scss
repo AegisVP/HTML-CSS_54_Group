@@ -28,7 +28,7 @@
   &:focus {
     outline: none;
     background-color: $color--main__darker-beige;
-    box-shadow: 0px 4px 4px rgba(171, 129, 108, 0.25);
+    box-shadow: 0px 4px 4px rgba(171, 129, 108, 0.5);
   }
 
   @media screen and (min-width: 1280px) {
