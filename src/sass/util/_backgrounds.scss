@@ -1,85 +1,124 @@
-.bg__part1 {
+body {
   background-repeat: no-repeat;
-  background-position: 0 0;
-
-  background-image: url('../images/bg_vector_top_mobile.svg');
-  background-size: 100% 474px;
-
-  @include tablet {
-    background-image: url('../images/bg_vector_top_tablet.svg');
-    background-size: 100% 650px;
-  }
-
-  @include desktop-bg {
-    background-image: url('../images/bg_vector_top_desktop.svg');
-    background-size: 100% 1036px;
-  }
-
-  // @include desktop-bg {
-  //   background-image:
-  //     url('../images/header_donut_desktop@1x.png'),
-  //     url('../images/bg_vector_top_desktop.svg');
-  //   background-size: 793px 831px, 100% 1036px;
-  //   background-position: top -170px right -77px, 0 0;
-
-  //   @include x2 {
-  //     background-image:
-  //       url('../images/header_donut_desktop@2x.png'),
-  //       url('../images/bg_vector_top_desktop.svg');
-  //   }
-  // }
-}
-
-.bg__part2 {
-  background-repeat: no-repeat, no-repeat, no-repeat;
 
   @include x1 {
-    background-image: url('../images/plate_mobile@1x.png'),
-      url('../images/bg_vector_bottom_mobile.svg');
-    background-position: bottom right, top 34px center;
-    background-size: auto, 100% 90%;
+    background-image: 
+      url('../images/plate_mobile@1x.png'),
+      url('../images/bg/bg1-m@1x-min.png'),
+      url('../images/bg/bg2-m@1x-min.png');
   }
-
+  
   @include x2 {
-    background-image: url('../images/plate_mobile@2x.png'),
-      url('../images/bg_vector_bottom_mobile.svg');
-    background-position: bottom right, top 34px center;
-    background-size: 84px, 100% 90%;
+    background-image: 
+      url('../images/plate_mobile@2x.png'),
+      url('../images/bg/bg1-m@2x-min.png'),
+      url('../images/bg/bg2-m@2x-min.png');
   }
 
+  background-size: 
+    113px 99px,
+    100vw 474px,
+    100vw 1337px;
+  
+  background-position:
+    right bottom,
+    center top,
+    center bottom 181px;
+  
   @include tablet {
     @include x1 {
-      background-image: url('../images/confetti_tablet@1x.png'),
+      background-image: 
         url('../images/plate_tablet@1x.png'),
-        url('../images/bg_vector_bottom_tablet.svg');
-      background-position: bottom 500px right, bottom right, top 42px center;
-      background-size: auto, auto, 100% 90%;
+        url('../images/bg/bg1-t@1x-min.png'),
+        url('../images/bg/bg2-t@1x-min.png');
+    }
+    
+    @include x2 {
+      background-image: 
+        url('../images/plate_tablet@2x.png'),
+        url('../images/bg/bg1-t@2x-min.png'),
+        url('../images/bg/bg2-t@2x-min.png');
     }
 
-    @include x2 {
-      background-image: url('../images/confetti_tablet@2x.png'),
-        url('../images/plate_tablet@2x.png'),
-        url('../images/bg_vector_bottom_tablet.svg');
-      background-position: bottom 500px right, bottom right, top 42px center;
-      background-size: 287px, 184px, 100% 90%;
-    }
+    background-size: 
+      184px 90px,
+      100% 622px,
+      100% 1519px;
+    
+    background-position:
+      right bottom,
+      center top,
+      center bottom;
   }
 
   @include desktop-bg {
     @include x1 {
-      background-image: url('../images/confetti_desktop@1x.png'),
+      background-image: 
         url('../images/plate_desktop@1x.png'),
-        url('../images/bg_vector_bottom_desktop.svg');
-      background-position: bottom 320px right, bottom right, top 42px center;
-      background-size: auto, auto, 100% 100%;
+        url('../images/bg/bg1-d@1x-min.png'),
+        url('../images/bg/bg2-d@1x-min.png');
+    }
+    
+    @include x2 {
+      background-image: 
+        url('../images/plate_desktop@2x.png'),
+        url('../images/bg/bg1-d@2x-min.png'),
+        url('../images/bg/bg2-d@2x-min.png');
+    }
+
+    background-size: 
+      302px 175px,
+      100% 1036px,
+      100% 2073px;
+    
+    background-position:
+      right bottom,
+      center top,
+      center bottom -212px;
+  }
+}
+
+.section-registration .registration-thumb {
+  position: relative;
+  z-index: 1;
+}
+
+.section-registration .container::after {
+  content: '';
+  display: none;
+  position: absolute;
+
+  z-index: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+
+  @include tablet {
+    display: block;
+    transform: translate(-35px, -345px);
+    height: 492px;
+    width: 768px;
+
+    @include x1 {
+      background-image: url('../images/reg-bak-t@1x.png');
     }
 
     @include x2 {
-      background-image: url('../images/confetti_desktop@2x.png'),
-        url('../images/plate_desktop@2x.png'),
-        url('../images/bg_vector_bottom_desktop.svg');
-      background-position: bottom 320px right, bottom right, top 42px center;
-      background-size: 566px, 302px, 100% 100%;
+      background-image: url('../images/reg-bak-t@2x.png');
+    }
+  }
+
+  @include desktop-bg {
+    height: 621px;
+    width: 1203px;
+    transform: translate(-35px, -335px);
+
+    @include x1 {
+      background-image: url('../images/reg-bak-d@1x.png');
+    }
+
+    @include x2 {
+      background-image: url('../images/reg-bak-d@2x.png');
     }
   }
 }

@@ -1,62 +1,64 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Montserrat:wght@400;500&display=swap"
-    />
-
-    <title>Donut Masterclass</title>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="../sass/index.css" />
-  </head>
-  <body> -->
-    <!-- registration-section -->
-<section class="section section-registration section-registration__pic">
-    <div class="container">
-       <div class="registration">
-                <h2 class="section__title">Registration</h2>
-                <div class="registration-thumb">
-            <ul class="registration-info">
-                <li class="registration-info__item">
-                    <p class="registration-info__details">May 23, 11:00</p>
-                </li>
-                <li class="registration-info__item">
-                    <p class="registration-info__details">New York</p>
-                </li>
-                <li class="registration-info__item">   
-                    <p class="registration-info__details">$ 699</p>
-                </li>
-            </ul>
-            <form class="registration-form">
-                    <p class="registration-form__text">Apply your personal info <br>
-                         for registration </p>
+      <section class="section section-registration" id="registration">
+        <div class="container">
+          <div class="registration">
+            <h2 class="section__title">Registration</h2>
+            <div class="registration-thumb">
+              <div class="registration-info">
+                <p class="registration-info__details">May 23, 11:00</p>
+                <p class="registration-info__details">New York</p>
+                <p class="registration-info__details">$ 699</p>
+              </div>
+              <form action="#" class="registration-form">
+                <p class="registration-form__text">
+                  Apply your personal info <br />
+                  for registration
+                </p>
                 <div class="registration-field">
-                    <div class="registration-field__box">
-                    <input class="name registration-field__input" name="name" id="name" placeholder="Your name" pattern="^[a-zA-Z]+\s[a-zA-Z]+$"  title="Username must be two words separated by space." required/>
-                        <label for="name" class="registration-field__lable"></label>
-                    <input class="phone registration-field__input" name="phone" id="phone" placeholder="Phone number" pattern="\+?[0-9\s\-\(\)]+" title="Enter numbers, please." required/>
-                        <label for="phone" class="registration-field__lable"></label>
-                    <input class="email registration-field__input" name="email" id="email" placeholder="E-mail" pattern=".+@.+.com" title="Looks like exemple@mail.com" required/>
-                        <label for="email" class="registration-field__lable"></label>
+                  <div class="registration-field__box">
+                    <div class="registration-field__group">
+                      <input
+                        class="name registration-field__input"
+                        name="name"
+                        id="name"
+                        placeholder="Your name"
+                        pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$"
+                        title="Username must be written in letters."
+                        required
+                      />
+                      <span class="registration-field__border"></span>
+                      <label for="name" class="registration-field__label">Your name</label>
                     </div>
-                    <button type="submit" class="button button--margin">Register</button>
+                    <div class="registration-field__group">
+                      <input
+                        class="phone registration-field__input"
+                        name="phone"
+                        id="phone"
+                        placeholder="Phone number"
+                        pattern="\+?[0-9\s\-\(\)]+"
+                        title="Enter numbers, please."
+                        required
+                      />
+                      <span class="registration-field__border"></span>
+                      <label for="phone" class="registration-field__label">Phone number</label>
+                    </div>
+                    <div class="registration-field__group">
+                      <input
+                        class="email registration-field__input"
+                        name="email"
+                        id="email"
+                        placeholder="E-mail"
+                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                        title="Looks like exemple@mail.com"
+                        required
+                      />
+                      <span class="registration-field__border"></span>
+                      <label for="email" class="registration-field__label">E-mail</label>
+                    </div>
+                  </div>
+                  <button type="submit" class="button button--margin">Register</button>
                 </div>
-            </form>
+              </form>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-</section>
-<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script src="./swiper.js"></script>
-<script type="module" src="./index.js"></script>
-  </body>
-</html> -->
+      </section>
