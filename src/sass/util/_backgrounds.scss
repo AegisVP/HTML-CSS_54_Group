@@ -25,55 +25,55 @@ body {
     center top,
     center bottom 181px;
   
-  // @include tablet {
-  //   @include x1 {
-  //     background-image: 
-  //       url('../images/plate_tablet@1x.png'),
-  //       url('../images/bg/bg1-t@1x-min.png'),
-  //       url('../images/bg/bg2-t@1x-min.png');
-  //   }
+  @include tablet {
+    @include x1 {
+      background-image: 
+        url('../images/plate_tablet@1x.png'),
+        url('../images/bg/bg1-t@1x-min.png'),
+        url('../images/bg/bg2-t@1x-min.png');
+    }
     
-  //   @include x2 {
-  //     background-image: 
-  //       url('../images/plate_tablet@2x.png'),
-  //       url('../images/bg/bg1-t@2x-min.png'),
-  //       url('../images/bg/bg2-t@2x-min.png');
-  //   }
+    @include x2 {
+      background-image: 
+        url('../images/plate_tablet@2x.png'),
+        url('../images/bg/bg1-t@2x-min.png'),
+        url('../images/bg/bg2-t@2x-min.png');
+    }
 
-  //   background-size: 
-  //     184px 90px,
-  //     100% 622px,
-  //     100% 1519px;
+    background-size: 
+      184px 90px,
+      100% 622px,
+      100% 1519px;
     
-  //   background-position:
-  //     right bottom,
-  //     center top,
-  //     center bottom;
-  // }
+    background-position:
+      right bottom,
+      center top,
+      center bottom;
+  }
 
-  // @include desktop-bg {
-  //   overflow-x: hidden;
+  @include desktop-bg {
+    overflow-x: hidden;
 
-  //   @include x1 {
-  //     background-image: 
-  //       url('../images/bg/bg1-d@1x-min.png'),
-  //       url('../images/bg/bg2-d@1x-min.png');
-  //   }
+    @include x1 {
+      background-image: 
+        url('../images/bg/bg1-d@1x-min.png'),
+        url('../images/bg/bg2-d@1x-min.png');
+    }
     
-  //   @include x2 {
-  //     background-image: 
-  //       url('../images/bg/bg1-d@2x-min.png'),
-  //       url('../images/bg/bg2-d@2x-min.png');
-  //   }
+    @include x2 {
+      background-image: 
+        url('../images/bg/bg1-d@2x-min.png'),
+        url('../images/bg/bg2-d@2x-min.png');
+    }
 
-  //   background-size: 
-  //     100% 1036px,
-  //     100% 2073px;
+    background-size: 
+      100% 1036px,
+      100% 2073px;
     
-  //   background-position:
-  //     center top,
-  //     center bottom -212px;
-  // }
+    background-position:
+      center top,
+      center bottom -212px;
+  }
 
 
       //   url('../images/plate_desktop@1x.png'),
@@ -162,47 +162,47 @@ body {
 //   }
 // }
 
-// .section-registration .registration-thumb {
-//   position: relative;
-//   z-index: 1;
-// }
+.section-registration .registration-thumb {
+  position: relative;
+  z-index: 1;
+}
 
-// .section-registration .container::after {
-//   content: '';
-//   display: none;
-//   position: absolute;
+.section-registration .container::after {
+  content: '';
+  display: none;
+  position: absolute;
 
-//   z-index: 0;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   overflow: hidden;
+  z-index: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
 
-//   @include tablet {
-//     display: block;
-//     transform: translate(-35px, -345px);
-//     height: 492px;
-//     width: 768px;
+  @include tablet {
+    display: block;
+    transform: translate(-35px, -345px);
+    height: 492px;
+    width: 768px;
 
-//     @include x1 {
-//       background-image: url('../images/reg-bak-t@1x.png');
-//     }
+    @include x1 {
+      background-image: url('../images/reg-bak-t@1x.png');
+    }
 
-//     @include x2 {
-//       background-image: url('../images/reg-bak-t@2x.png');
-//     }
-//   }
+    @include x2 {
+      background-image: url('../images/reg-bak-t@2x.png');
+    }
+  }
 
-//   @include desktop-bg {
-//     height: 621px;
-//     width: 1203px;
-//     transform: translate(-35px, -335px);
+  @include desktop-bg {
+    height: 621px;
+    width: 1203px;
+    transform: translate(-35px, -335px);
 
-//     @include x1 {
-//       background-image: url('../images/reg-bak-d@1x.png');
-//     }
+    @include x1 {
+      background-image: url('../images/reg-bak-d@1x.png');
+    }
 
-//     @include x2 {
-//       background-image: url('../images/reg-bak-d@2x.png');
-//     }
-//   }
-// }
+    @include x2 {
+      background-image: url('../images/reg-bak-d@2x.png');
+    }
+  }
+}
