@@ -95,7 +95,7 @@
 
 @include desktop-bg {
   .about-us__container { 
-    position: relative;
+    position: static;
     // padding-top: 150px;
     // padding-left: 126px;
     // padding-right: 126px;
@@ -119,7 +119,7 @@
     margin: 0;
     padding: 0;
     // top: 550px; // position from top of page
-    top: 110px; // position from top of container
+    // top: 110px; // position from top of container
     left: -76px;
     width: 179px;
     height: 422px;

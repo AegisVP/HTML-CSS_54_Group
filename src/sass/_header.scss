@@ -28,20 +28,16 @@
   }
 
   @media screen and (min-width: 1280px) {
+    position: static;
     width: 1280px;
     padding: 38px 20px 0 20px;
-
   }
-
-  
-    // overflow: hidden;
-    // overflow-y:unset;
 
   &::after {
     content: "";
     display: block;
     position: absolute;
-    // overflow-x: hidden;
+    overflow-x: hidden;
     top: -51px;
     left: -12px;
     width: 130px;
@@ -67,18 +63,18 @@
     }
 
     @include desktop-bg {
-      top: -170px;
-      left: 564px;
-      width: 793px;
-      height: 831px;
+      top: 0;
+      left: auto;
+      right: 0;
+      width: 716px;
+      height: 661px;
 
-      background-size: 793px 831px ;
+      background-position: right top;
+      background-size: 716px 661px ;
       background-image: url('../images/header_donut_desktop@1x.png');
       @include x2 {background-image: url('../images/header_donut_desktop@2x.png');}
     }
   }
-
-
 }
 
 // burger
@@ -218,26 +214,5 @@
 
     font-size: 24px;
     line-height: 30px;
-  }
-}
-
-
-
-// images
-
-.img__donuts {
-  position: absolute; 
-  top: 0;
-  left: 0;
-  width: auto;
-  height: auto;
-
-  @media screen and (min-width: 768px) {  
-    left: auto;
-    right: 102px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    right: 0;
   }
 }

@@ -17,26 +17,20 @@
   }
 }
 
-.program__inner,
-.program__badges {
-  max-width: 440px;
-
-  @include tablet {
-    &:not(:last-of-type) {
-      margin-right: 32px;
-      max-width: 336px;
-    }
+.program__inner {
+  
+  @media screen and (max-width: 767.98px) {
+    max-width: 440px;
   }
 
+  @include tablet {
+    margin-right: 32px;
+    width: 336px;
+  }
+  
   @include desktop-bg {
-    &:not(:last-of-type) {
-      margin-right: 142px;
-      max-width: 392px;
-    }
-
-    &:not(:first-of-type) {
-      max-width: 500px;
-    }
+    margin-right: 142px;
+    width: 392px;
   }
 }
 
@@ -45,6 +39,14 @@
     max-width: 280px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  @include tablet {
+    width: 336px;
+  }
+
+  @include desktop-bg {
+    width: 500px;
   }
 }
 
