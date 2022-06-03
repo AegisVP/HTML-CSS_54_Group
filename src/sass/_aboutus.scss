@@ -127,7 +127,11 @@
     font-size: 0;
     overflow: hidden;
 
-    background: no-repeat url(../images/spoon/spoon@1x-min.png);
-    @include x2 {background: no-repeat url(../images/spoon/spoon@2x-min.png);}
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 179px 422px;
+    
+    background-image: url(../images/spoon/spoon@1x-min.png);
+    @include x2 {background-image: url(../images/spoon/spoon@2x-min.png);}
   }
 }
